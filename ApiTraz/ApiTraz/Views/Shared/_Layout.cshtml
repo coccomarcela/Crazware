@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Mi aplicación ASP.NET MVC</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+          @Styles.Render("~/Content/cssMenu")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("su logotipo aquí", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                        </ul>
+                                            </nav>
+
+
+                                            				
+                </div>
+            </div>
+        </header>
+        <div id="body">
+
+<div id="dl-menu" class="dl-menuwrapper">
+						<button>Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="#">Fashion</a>
+								<ul class="dl-submenu">
+									<li class="dl-back"><a href="#">back</a></li>
+									<li>
+										<a href="#">Men</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li><a href="#">Shirts</a></li>
+											<li><a href="#">Jackets</a></li>
+											<li><a href="#">Chinos &amp; Trousers</a></li>
+											<li><a href="#">Jeans</a></li>
+											<li><a href="#">T-Shirts</a></li>
+											<li><a href="#">Underwear</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Women</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li><a href="#">Jackets</a></li>
+											<li><a href="#">Knits</a></li>
+											<li><a href="#">Jeans</a></li>
+											<li><a href="#">Dresses</a></li>
+											<li><a href="#">Blouses</a></li>
+											<li><a href="#">T-Shirts</a></li>
+											<li><a href="#">Underwear</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Children</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li><a href="#">Boys</a></li>
+											<li><a href="#">Girls</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Electronics</a>
+								<ul class="dl-submenu">
+									<li class="dl-back"><a href="#">back</a></li>
+									<li><a href="#">Camera &amp; Photo</a></li>
+									<li><a href="#">TV &amp; Home Cinema</a></li>
+									<li><a href="#">Phones</a></li>
+									<li><a href="#">PC &amp; Video Games</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Furniture</a>
+								<ul class="dl-submenu">
+									<li class="dl-back"><a href="#">back</a></li>
+									<li>
+										<a href="#">Living Room</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li><a href="#">Sofas &amp; Loveseats</a></li>
+											<li><a href="#">Coffee &amp; Accent Tables</a></li>
+											<li><a href="#">Chairs &amp; Recliners</a></li>
+											<li><a href="#">Bookshelves</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Bedroom</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li>
+												<a href="#">Beds</a>
+												<ul class="dl-submenu">
+													<li class="dl-back"><a href="#">back</a></li>
+													<li><a href="#">Upholstered Beds</a></li>
+													<li><a href="#">Divans</a></li>
+													<li><a href="#">Metal Beds</a></li>
+													<li><a href="#">Storage Beds</a></li>
+													<li><a href="#">Wooden Beds</a></li>
+													<li><a href="#">Children's Beds</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Bedroom Sets</a></li>
+											<li><a href="#">Chests &amp; Dressers</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Home Office</a></li>
+									<li><a href="#">Dining &amp; Bar</a></li>
+									<li><a href="#">Patio</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Jewelry &amp; Watches</a>
+								<ul class="dl-submenu">
+									<li class="dl-back"><a href="#">back</a></li>
+									<li><a href="#">Fine Jewelry</a></li>
+									<li><a href="#">Fashion Jewelry</a></li>
+									<li><a href="#">Watches</a></li>
+									<li>
+										<a href="#">Wedding Jewelry</a>
+										<ul class="dl-submenu">
+											<li class="dl-back"><a href="#">back</a></li>
+											<li><a href="#">Engagement Rings</a></li>
+											<li><a href="#">Bridal Sets</a></li>
+											<li><a href="#">Women's Wedding Bands</a></li>
+											<li><a href="#">Men's Wedding Bands</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET MVC</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+     
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		@Scripts.Render("~/bundles/jqueryMenu")
+		<script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' }
+				});
+			});
+		</script>
+
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
