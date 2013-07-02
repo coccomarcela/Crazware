@@ -1,0 +1,1554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ActProductivas" EntityType="Model.Store.ActProductivas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Apiarios" EntityType="Model.Store.Apiarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AsesorTecnico" EntityType="Model.Store.AsesorTecnico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Applications" EntityType="Model.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Membership" EntityType="Model.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Paths" EntityType="Model.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Model.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Model.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Profile" EntityType="Model.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Roles" EntityType="Model.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Model.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Users" EntityType="Model.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Model.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Model.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Compradores" EntityType="Model.Store.Compradores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ControlSanitario" EntityType="Model.Store.ControlSanitario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cuencas" EntityType="Model.Store.Cuencas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dptos" EntityType="Model.Store.Dptos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Enfermedades" EntityType="Model.Store.Enfermedades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FormasComercializacion" EntityType="Model.Store.FormasComercializacion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Grupos" EntityType="Model.Store.Grupos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Laboratorio" EntityType="Model.Store.Laboratorio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Laboratorio movimiento" EntityType="Model.Store.Laboratorio movimiento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Loc" EntityType="Model.Store.Loc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManejoColmenar" EntityType="Model.Store.ManejoColmenar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MovSalasExtraccion" EntityType="Model.Store.MovSalasExtraccion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MovSalasExtraccionDet" EntityType="Model.Store.MovSalasExtraccionDet" store:Type="Tables" store:Schema="dbo" store:Name="MovSalasExtraccionDet">
+      <DefiningQuery>SELECT 
+      [MovSalasExtraccionDet].[NroSalaExtraccion] AS [NroSalaExtraccion], 
+      [MovSalasExtraccionDet].[Año] AS [Año], 
+      [MovSalasExtraccionDet].[Mes] AS [Mes], 
+      [MovSalasExtraccionDet].[SENroItem] AS [SENroItem], 
+      [MovSalasExtraccionDet].[IdTipoSala] AS [IdTipoSala], 
+      [MovSalasExtraccionDet].[Fecha] AS [Fecha], 
+      [MovSalasExtraccionDet].[ren] AS [ren], 
+      [MovSalasExtraccionDet].[MediaAlzas] AS [MediaAlzas], 
+      [MovSalasExtraccionDet].[CodProd] AS [CodProd], 
+      [MovSalasExtraccionDet].[KiloObtenido] AS [KiloObtenido], 
+      [MovSalasExtraccionDet].[NumAlzas] AS [NumAlzas], 
+      [MovSalasExtraccionDet].[SEPresentacion] AS [SEPresentacion], 
+      [MovSalasExtraccionDet].[SECantEnvases] AS [SECantEnvases], 
+      [MovSalasExtraccionDet].[SEtotalKgs] AS [SEtotalKgs], 
+      [MovSalasExtraccionDet].[SENroLote] AS [SENroLote], 
+      [MovSalasExtraccionDet].[SEDocAmparo] AS [SEDocAmparo], 
+      [MovSalasExtraccionDet].[CodComprador] AS [CodComprador]
+      FROM [dbo].[MovSalasExtraccionDet] AS [MovSalasExtraccionDet]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PlanillaCampo" EntityType="Model.Store.PlanillaCampo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillasMovimientos" EntityType="Model.Store.PlanillasMovimientos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrevalenciaVarroa" EntityType="Model.Store.PrevalenciaVarroa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Productores" EntityType="Model.Store.Productores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Productos" EntityType="Model.Store.Productos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductosOfrecidosProv" EntityType="Model.Store.ProductosOfrecidosProv" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductosProvVivo" EntityType="Model.Store.ProductosProvVivo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProveedoresMatInerte" EntityType="Model.Store.ProveedoresMatInerte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProveedoresMatVivo" EntityType="Model.Store.ProveedoresMatVivo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Remedios" EntityType="Model.Store.Remedios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RemediosPorProductor" EntityType="Model.Store.RemediosPorProductor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalaProcFraccMovimientoDel" EntityType="Model.Store.SalaProcFraccMovimientoDel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalaProcYFraccMovimiento" EntityType="Model.Store.SalaProcYFraccMovimiento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalasExtracción" EntityType="Model.Store.SalasExtracción" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalasProcFracc" EntityType="Model.Store.SalasProcFracc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos de analisis" EntityType="Model.Store.Tipos de analisis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos de Grupos" EntityType="Model.Store.Tipos de Grupos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TiposSalas" EntityType="Model.Store.TiposSalas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfile" EntityType="Model.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="Model.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Model.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="Model.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Model.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ActProductivas_FK00" Association="Model.Store.ActProductivas_FK00">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ActProductivas" EntitySet="ActProductivas" />
+    </AssociationSet>
+    <AssociationSet Name="ActProductivas_FK01" Association="Model.Store.ActProductivas_FK01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ActProductivas" EntitySet="ActProductivas" />
+    </AssociationSet>
+    <AssociationSet Name="Apiarios_FK00" Association="Model.Store.Apiarios_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Apiarios" EntitySet="Apiarios" />
+    </AssociationSet>
+    <AssociationSet Name="Apiarios_FK01" Association="Model.Store.Apiarios_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="Apiarios" EntitySet="Apiarios" />
+    </AssociationSet>
+    <AssociationSet Name="ControlSanitario_FK00" Association="Model.Store.ControlSanitario_FK00">
+      <End Role="AsesorTecnico" EntitySet="AsesorTecnico" />
+      <End Role="ControlSanitario" EntitySet="ControlSanitario" />
+    </AssociationSet>
+    <AssociationSet Name="ControlSanitario_FK01" Association="Model.Store.ControlSanitario_FK01">
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+      <End Role="ControlSanitario" EntitySet="ControlSanitario" />
+    </AssociationSet>
+    <AssociationSet Name="Dptos_FK00" Association="Model.Store.Dptos_FK00">
+      <End Role="Cuencas" EntitySet="Cuencas" />
+      <End Role="Dptos" EntitySet="Dptos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__6EC0713C" Association="Model.Store.FK__aspnet_Me__Appli__6EC0713C">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__6FB49575" Association="Model.Store.FK__aspnet_Me__UserI__6FB49575">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__27F8EE98" Association="Model.Store.FK__aspnet_Pa__Appli__27F8EE98">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__2F9A1060" Association="Model.Store.FK__aspnet_Pe__PathI__2F9A1060">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__3552E9B6" Association="Model.Store.FK__aspnet_Pe__PathI__3552E9B6">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__36470DEF" Association="Model.Store.FK__aspnet_Pe__UserI__36470DEF">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__05A3D694" Association="Model.Store.FK__aspnet_Pr__UserI__05A3D694">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__11158940" Association="Model.Store.FK__aspnet_Ro__Appli__11158940">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__5AB9788F" Association="Model.Store.FK__aspnet_Us__Appli__5AB9788F">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__17C286CF" Association="Model.Store.FK__aspnet_Us__RoleI__17C286CF">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__16CE6296" Association="Model.Store.FK__aspnet_Us__UserI__16CE6296">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="Model.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="Model.Store.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK00" Association="Model.Store.FormasComercializacion_FK00">
+      <End Role="Compradores" EntitySet="Compradores" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK01" Association="Model.Store.FormasComercializacion_FK01">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK02" Association="Model.Store.FormasComercializacion_FK02">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK03" Association="Model.Store.FormasComercializacion_FK03">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="Grupos_FK00" Association="Model.Store.Grupos_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="Grupos_FK01" Association="Model.Store.Grupos_FK01">
+      <End Role="Tipos de Grupos" EntitySet="Tipos de Grupos" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="Loc_FK00" Association="Model.Store.Loc_FK00">
+      <End Role="Dptos" EntitySet="Dptos" />
+      <End Role="Loc" EntitySet="Loc" />
+    </AssociationSet>
+    <AssociationSet Name="ManejoColmenar_FK00" Association="Model.Store.ManejoColmenar_FK00">
+      <End Role="Enfermedades" EntitySet="Enfermedades" />
+      <End Role="ManejoColmenar" EntitySet="ManejoColmenar" />
+    </AssociationSet>
+    <AssociationSet Name="ManejoColmenar_FK01" Association="Model.Store.ManejoColmenar_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ManejoColmenar" EntitySet="ManejoColmenar" />
+    </AssociationSet>
+    <AssociationSet Name="MovSalasExtraccion_FK00" Association="Model.Store.MovSalasExtraccion_FK00">
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="MovSalasExtraccion" EntitySet="MovSalasExtraccion" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillaCampo_FK00" Association="Model.Store.PlanillaCampo_FK00">
+      <End Role="Apiarios" EntitySet="Apiarios" />
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillaCampo_FK01" Association="Model.Store.PlanillaCampo_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillasMovimientos_FK00" Association="Model.Store.PlanillasMovimientos_FK00">
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+      <End Role="PlanillasMovimientos" EntitySet="PlanillasMovimientos" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillasMovimientos_FK01" Association="Model.Store.PlanillasMovimientos_FK01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="PlanillasMovimientos" EntitySet="PlanillasMovimientos" />
+    </AssociationSet>
+    <AssociationSet Name="PrevalenciaVarroa_FK00" Association="Model.Store.PrevalenciaVarroa_FK00">
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+      <End Role="PrevalenciaVarroa" EntitySet="PrevalenciaVarroa" />
+    </AssociationSet>
+    <AssociationSet Name="Productores_FK00" Association="Model.Store.Productores_FK00">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Productores" EntitySet="Productores" />
+    </AssociationSet>
+    <AssociationSet Name="Productores_FK01" Association="Model.Store.Productores_FK01">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Productores" EntitySet="Productores" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosOfrecidosProv_FK00" Association="Model.Store.ProductosOfrecidosProv_FK00">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ProductosOfrecidosProv" EntitySet="ProductosOfrecidosProv" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosOfrecidosProv_FK01" Association="Model.Store.ProductosOfrecidosProv_FK01">
+      <End Role="ProveedoresMatInerte" EntitySet="ProveedoresMatInerte" />
+      <End Role="ProductosOfrecidosProv" EntitySet="ProductosOfrecidosProv" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosProvVivo_FK00" Association="Model.Store.ProductosProvVivo_FK00">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ProductosProvVivo" EntitySet="ProductosProvVivo" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosProvVivo_FK01" Association="Model.Store.ProductosProvVivo_FK01">
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+      <End Role="ProductosProvVivo" EntitySet="ProductosProvVivo" />
+    </AssociationSet>
+    <AssociationSet Name="ProveedoresMatInerte_FK00" Association="Model.Store.ProveedoresMatInerte_FK00">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ProveedoresMatInerte" EntitySet="ProveedoresMatInerte" />
+    </AssociationSet>
+    <AssociationSet Name="ProveedoresMatVivo_FK00" Association="Model.Store.ProveedoresMatVivo_FK00">
+      <End Role="Apiarios" EntitySet="Apiarios" />
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+    </AssociationSet>
+    <AssociationSet Name="RemediosPorProductor_FK00" Association="Model.Store.RemediosPorProductor_FK00">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="RemediosPorProductor" EntitySet="RemediosPorProductor" />
+    </AssociationSet>
+    <AssociationSet Name="RemediosPorProductor_FK01" Association="Model.Store.RemediosPorProductor_FK01">
+      <End Role="Remedios" EntitySet="Remedios" />
+      <End Role="RemediosPorProductor" EntitySet="RemediosPorProductor" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcFraccMovimientoDe_FK00" Association="Model.Store.SalaProcFraccMovimientoDe_FK00">
+      <End Role="SalaProcYFraccMovimiento" EntitySet="SalaProcYFraccMovimiento" />
+      <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcFraccMovimientoDe_FK01" Association="Model.Store.SalaProcFraccMovimientoDe_FK01">
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcYFraccMovimiento_FK00" Association="Model.Store.SalaProcYFraccMovimiento_FK00">
+      <End Role="SalasProcFracc" EntitySet="SalasProcFracc" />
+      <End Role="SalaProcYFraccMovimiento" EntitySet="SalaProcYFraccMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK00" Association="Model.Store.SalasExtracción_FK00">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK01" Association="Model.Store.SalasExtracción_FK01">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK02" Association="Model.Store.SalasExtracción_FK02">
+      <End Role="TiposSalas" EntitySet="TiposSalas" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="SalasProcFracc_FK00" Association="Model.Store.SalasProcFracc_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="SalasProcFracc" EntitySet="SalasProcFracc" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ActProductivas">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="CodProd" Type="int" Nullable="false" />
+    <Property Name="Cant" Type="int" />
+    <Property Name="Unidad" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Apiarios">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="NroApiario" Type="int" Nullable="false" />
+    <Property Name="Ubicación" Type="nvarchar" MaxLength="80" />
+    <Property Name="Geoposición" Type="nvarchar" MaxLength="80" />
+    <Property Name="NroColmenas" Type="int" />
+    <Property Name="RENSPA" Type="nvarchar" MaxLength="80" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="150" />
+    <Property Name="CodLoc" Type="int" />
+  </EntityType>
+  <EntityType Name="AsesorTecnico">
+    <Key>
+      <PropertyRef Name="IdTecnico" />
+    </Key>
+    <Property Name="IdTecnico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TecNom" Type="nvarchar" MaxLength="80" />
+    <Property Name="TecOrg" Type="nvarchar" MaxLength="80" />
+    <Property Name="TecTel" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Compradores">
+    <Key>
+      <PropertyRef Name="CodComprador" />
+    </Key>
+    <Property Name="CodComprador" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="80" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="80" />
+    <Property Name="CompDir" Type="nvarchar" MaxLength="80" />
+    <Property Name="CompTel" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="ControlSanitario">
+    <Key>
+      <PropertyRef Name="IdControl" />
+    </Key>
+    <Property Name="IdControl" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NroRegistroVivo" Type="int" />
+    <Property Name="IdTecnico" Type="int" />
+    <Property Name="ControSfecha" Type="datetime" />
+    <Property Name="ControlSobs" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Cuencas">
+    <Key>
+      <PropertyRef Name="codcuenca" />
+    </Key>
+    <Property Name="codcuenca" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cuenca" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Dptos">
+    <Key>
+      <PropertyRef Name="CodDpto" />
+    </Key>
+    <Property Name="CodDpto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Dpto" Type="nvarchar" MaxLength="80" />
+    <Property Name="codcuenca" Type="int" />
+  </EntityType>
+  <EntityType Name="Enfermedades">
+    <Key>
+      <PropertyRef Name="CodEnfermedad" />
+    </Key>
+    <Property Name="CodEnfermedad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Enfermedad" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="FormasComercializacion">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="CodProd" Type="int" Nullable="false" />
+    <Property Name="CodComprador" Type="int" />
+    <Property Name="CodGrupo" Type="int" />
+    <Property Name="Directa" Type="bit" />
+    <Property Name="Otras" Type="bit" />
+    <Property Name="Comprador" Type="bit" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="CodGrupo" />
+    </Key>
+    <Property Name="CodGrupo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoGrupo" Type="int" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="80" />
+    <Property Name="CUIT" Type="nvarchar" MaxLength="13" />
+    <Property Name="Dirección" Type="nvarchar" MaxLength="80" />
+    <Property Name="Teléfono" Type="nvarchar" MaxLength="40" />
+    <Property Name="GCorreoElec" Type="nvarchar" MaxLength="80" />
+    <Property Name="CodLoc" Type="int" />
+  </EntityType>
+  <EntityType Name="Laboratorio">
+    <Key>
+      <PropertyRef Name="CodLab" />
+    </Key>
+    <Property Name="CodLab" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Laboratorio movimiento">
+    <Key>
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Item" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodLab" Type="int" />
+    <Property Name="NroSalaExtraccion" Type="int" />
+    <Property Name="IdTipoSala" Type="int" />
+    <Property Name="ren" Type="nvarchar" MaxLength="255" />
+    <Property Name="CodTipoAnalisis" Type="int" />
+    <Property Name="Fecha de Extraccion" Type="datetime" />
+    <Property Name="Fecha analisis" Type="datetime" />
+    <Property Name="Nro de muestra" Type="int" />
+    <Property Name="Resultado" Type="nvarchar" MaxLength="255" />
+    <Property Name="unidad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tambor" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Loc">
+    <Key>
+      <PropertyRef Name="CodLoc" />
+    </Key>
+    <Property Name="CodLoc" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Loc" Type="nvarchar" MaxLength="80" />
+    <Property Name="CodDpto" Type="int" />
+    <Property Name="codpos" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="ManejoColmenar">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodEnfermedad" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="CodEnfermedad" Type="int" Nullable="false" />
+    <Property Name="Preven" Type="bit" />
+    <Property Name="Cura" Type="bit" />
+    <Property Name="Otoño" Type="bit" />
+    <Property Name="Primavera" Type="bit" />
+  </EntityType>
+  <EntityType Name="MovSalasExtraccion">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="IdTipoSala" Type="int" Nullable="false" />
+    <Property Name="MovSObs" Type="ntext" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'Sistema_Apicola SQL.dbo.MovSalasExtraccionDet' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="MovSalasExtraccionDet">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="SENroItem" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="SENroItem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoSala" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="ren" Type="nvarchar" MaxLength="80" />
+    <Property Name="MediaAlzas" Type="int" />
+    <Property Name="CodProd" Type="int" />
+    <Property Name="KiloObtenido" Type="float" />
+    <Property Name="NumAlzas" Type="int" />
+    <Property Name="SEPresentacion" Type="float" />
+    <Property Name="SECantEnvases" Type="int" />
+    <Property Name="SEtotalKgs" Type="float" />
+    <Property Name="SENroLote" Type="nvarchar" MaxLength="40" />
+    <Property Name="SEDocAmparo" Type="nvarchar" MaxLength="40" />
+    <Property Name="CodComprador" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanillaCampo">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="NroApiario" Type="int" Nullable="false" />
+    <Property Name="AñoInicio" Type="int" Nullable="false" />
+    <Property Name="AñoFin" Type="int" Nullable="false" />
+    <Property Name="ColmenasInicio" Type="int" />
+    <Property Name="ColmenasRevisadas" Type="int" />
+    <Property Name="ColmenasDescartadas" Type="int" />
+    <Property Name="CCpromedio" Type="int" />
+    <Property Name="CMpromedio" Type="int" />
+    <Property Name="ColmenasI" Type="int" />
+    <Property Name="ColmenasII" Type="int" />
+    <Property Name="ColemenasIII" Type="int" />
+    <Property Name="LoqueAmer" Type="int" />
+    <Property Name="LoqueEur" Type="int" />
+    <Property Name="CriaEnsacada" Type="int" />
+    <Property Name="CriaYesificada" Type="int" />
+    <Property Name="Otras" Type="int" />
+    <Property Name="Huerfanas" Type="int" />
+    <Property Name="Zangueras" Type="int" />
+    <Property Name="Muertas" Type="int" />
+    <Property Name="FechaOtonoAnt" Type="datetime" />
+    <Property Name="ProductoOtonoAnt" Type="nvarchar" MaxLength="80" />
+    <Property Name="FechaTratActual" Type="datetime" />
+    <Property Name="ProductoTratActual" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="PlanillasMovimientos">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+      <PropertyRef Name="CodItem" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="NroApiario" Type="int" Nullable="false" />
+    <Property Name="AñoInicio" Type="int" Nullable="false" />
+    <Property Name="AñoFin" Type="int" Nullable="false" />
+    <Property Name="CodItem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PlFecha" Type="datetime" />
+    <Property Name="PlNucleo" Type="int" />
+    <Property Name="PlColmenas" Type="int" />
+    <Property Name="PlTipoAlimento" Type="nvarchar" MaxLength="80" />
+    <Property Name="PlCantColmenas" Type="int" />
+    <Property Name="CodProd" Type="int" />
+    <Property Name="PlDosis" Type="nvarchar" MaxLength="80" />
+    <Property Name="PlTipoMultipl" Type="nvarchar" MaxLength="80" />
+    <Property Name="PlCantMultipl" Type="int" />
+    <Property Name="PlOrigenDest" Type="nvarchar" MaxLength="80" />
+    <Property Name="PlMediasAlzas" Type="int" />
+    <Property Name="PlReinas" Type="int" />
+    <Property Name="PlCantMediaAlza" Type="int" />
+    <Property Name="SEKgsNetos" Type="float" />
+    <Property Name="SEobs" Type="ntext" />
+  </EntityType>
+  <EntityType Name="PrevalenciaVarroa">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+      <PropertyRef Name="ColmenaNum" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="NroApiario" Type="int" Nullable="false" />
+    <Property Name="AñoInicio" Type="int" Nullable="false" />
+    <Property Name="AñoFin" Type="int" Nullable="false" />
+    <Property Name="ColmenaNum" Type="int" Nullable="false" />
+    <Property Name="AbejasDetectAnt" Type="int" />
+    <Property Name="AbejasDetecDesp" Type="int" />
+    <Property Name="VarroaDetecAnt" Type="int" />
+    <Property Name="VarroaDetecDesp" Type="int" />
+    <Property Name="PorcetajeAnt" Type="float" />
+    <Property Name="PorcentajeDesp" Type="float" />
+  </EntityType>
+  <EntityType Name="Productores">
+    <Key>
+      <PropertyRef Name="ren" />
+    </Key>
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="fechains" Type="datetime" />
+    <Property Name="fechavenc" Type="datetime" />
+    <Property Name="ape" Type="nvarchar" MaxLength="80" />
+    <Property Name="nom" Type="nvarchar" MaxLength="80" />
+    <Property Name="dni" Type="int" />
+    <Property Name="dom" Type="nvarchar" MaxLength="80" />
+    <Property Name="tel" Type="nvarchar" MaxLength="40" />
+    <Property Name="correo" Type="nvarchar" MaxLength="80" />
+    <Property Name="CodLoc" Type="int" />
+    <Property Name="TratamientosSanitarios" Type="bit" />
+    <Property Name="TipoRemedios" Type="ntext" />
+    <Property Name="CodGrupo" Type="int" />
+    <Property Name="Cuit" Type="nvarchar" MaxLength="255" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Carnet" Type="bit" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="CodProd" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prod" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="ProductosOfrecidosProv">
+    <Key>
+      <PropertyRef Name="NroRegistroInerte" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="NroRegistroInerte" Type="int" Nullable="false" />
+    <Property Name="CodProd" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductosProvVivo">
+    <Key>
+      <PropertyRef Name="NroRegistroVivo" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="NroRegistroVivo" Type="int" Nullable="false" />
+    <Property Name="CodProd" Type="int" Nullable="false" />
+    <Property Name="ProvProtocolo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProveedoresMatInerte">
+    <Key>
+      <PropertyRef Name="NroRegistroInerte" />
+    </Key>
+    <Property Name="NroRegistroInerte" Type="int" Nullable="false" />
+    <Property Name="ren" Type="nvarchar" MaxLength="80" />
+    <Property Name="ProvApeIn" Type="nvarchar" MaxLength="80" />
+    <Property Name="ProvNomIn" Type="nvarchar" MaxLength="80" />
+    <Property Name="ProvDomIn" Type="nvarchar" MaxLength="80" />
+    <Property Name="ProvDomLeIn" Type="nvarchar" MaxLength="80" />
+    <Property Name="ProvTeleIn" Type="nvarchar" MaxLength="40" />
+    <Property Name="ProvFaxIn" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProvObsIn" Type="nvarchar" MaxLength="80" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dni" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ProveedoresMatVivo">
+    <Key>
+      <PropertyRef Name="NroRegistroVivo" />
+    </Key>
+    <Property Name="NroRegistroVivo" Type="int" Nullable="false" />
+    <Property Name="ren" Type="nvarchar" MaxLength="80" />
+    <Property Name="NroApiario" Type="int" />
+    <Property Name="ProvObsVivo" Type="nvarchar" MaxLength="80" />
+    <Property Name="Domicilio" Type="nvarchar" MaxLength="255" />
+    <Property Name="Correo Eletronico" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Remedios">
+    <Key>
+      <PropertyRef Name="CodRem" />
+    </Key>
+    <Property Name="CodRem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Remedio" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="RemediosPorProductor">
+    <Key>
+      <PropertyRef Name="CodRem" />
+      <PropertyRef Name="ren" />
+    </Key>
+    <Property Name="CodRem" Type="int" Nullable="false" />
+    <Property Name="ren" Type="nvarchar" Nullable="false" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="SalaProcFraccMovimientoDel">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="SPFNroItem" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="SPFNroItem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SPFFecha" Type="datetime" />
+    <Property Name="ProcEnPlanta" Type="nvarchar" MaxLength="80" />
+    <Property Name="SPFNroLoteFinal" Type="nvarchar" MaxLength="40" />
+    <Property Name="SPFPresentación" Type="float" />
+    <Property Name="SPFCantEnvases" Type="int" />
+    <Property Name="SPFTotalKgs" Type="float" />
+    <Property Name="SPFDocAmparo" Type="nvarchar" MaxLength="40" />
+    <Property Name="NroSalaExtraccion" Type="int" />
+    <Property Name="IdTipoSala" Type="int" />
+  </EntityType>
+  <EntityType Name="SalaProcYFraccMovimiento">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalasExtracción">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="int" Nullable="false" />
+    <Property Name="IdTipoSala" Type="int" Nullable="false" />
+    <Property Name="CodLoc" Type="int" />
+    <Property Name="Dueño" Type="nvarchar" MaxLength="80" />
+    <Property Name="Telfijo" Type="nvarchar" MaxLength="40" />
+    <Property Name="Telmovil" Type="nvarchar" MaxLength="40" />
+    <Property Name="CorreoElec" Type="nvarchar" MaxLength="80" />
+    <Property Name="CodGrupo" Type="int" />
+  </EntityType>
+  <EntityType Name="SalasProcFracc">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="int" Nullable="false" />
+    <Property Name="CodLoc" Type="int" />
+  </EntityType>
+  <EntityType Name="Tipos de analisis">
+    <Key>
+      <PropertyRef Name="CodTipoAnalisis" />
+    </Key>
+    <Property Name="CodTipoAnalisis" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Rango de valores" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unidad" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Tipos de Grupos">
+    <Key>
+      <PropertyRef Name="IdTipoGrupo" />
+    </Key>
+    <Property Name="IdTipoGrupo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoGrupo" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="TiposSalas">
+    <Key>
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="IdTipoSala" Type="int" Nullable="false" />
+    <Property Name="tipoSala" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ActProductivas_FK00">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="ActProductivas" Type="Model.Store.ActProductivas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ActProductivas">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActProductivas_FK01">
+    <End Role="Productos" Type="Model.Store.Productos" Multiplicity="1" />
+    <End Role="ActProductivas" Type="Model.Store.ActProductivas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="ActProductivas">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Apiarios_FK00">
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="0..1" />
+    <End Role="Apiarios" Type="Model.Store.Apiarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Apiarios">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Apiarios_FK01">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="Apiarios" Type="Model.Store.Apiarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="Apiarios">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ControlSanitario_FK00">
+    <End Role="AsesorTecnico" Type="Model.Store.AsesorTecnico" Multiplicity="0..1" />
+    <End Role="ControlSanitario" Type="Model.Store.ControlSanitario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsesorTecnico">
+        <PropertyRef Name="IdTecnico" />
+      </Principal>
+      <Dependent Role="ControlSanitario">
+        <PropertyRef Name="IdTecnico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ControlSanitario_FK01">
+    <End Role="ProveedoresMatVivo" Type="Model.Store.ProveedoresMatVivo" Multiplicity="0..1" />
+    <End Role="ControlSanitario" Type="Model.Store.ControlSanitario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresMatVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Principal>
+      <Dependent Role="ControlSanitario">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Dptos_FK00">
+    <End Role="Cuencas" Type="Model.Store.Cuencas" Multiplicity="0..1" />
+    <End Role="Dptos" Type="Model.Store.Dptos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuencas">
+        <PropertyRef Name="codcuenca" />
+      </Principal>
+      <Dependent Role="Dptos">
+        <PropertyRef Name="codcuenca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__Appli__6EC0713C">
+    <End Role="aspnet_Applications" Type="Model.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Model.Store.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__6FB49575">
+    <End Role="aspnet_Users" Type="Model.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Model.Store.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__27F8EE98">
+    <End Role="aspnet_Applications" Type="Model.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Model.Store.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__2F9A1060">
+    <End Role="aspnet_Paths" Type="Model.Store.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Model.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__3552E9B6">
+    <End Role="aspnet_Paths" Type="Model.Store.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Model.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__36470DEF">
+    <End Role="aspnet_Users" Type="Model.Store.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Model.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__05A3D694">
+    <End Role="aspnet_Users" Type="Model.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Model.Store.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__11158940">
+    <End Role="aspnet_Applications" Type="Model.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="Model.Store.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__5AB9788F">
+    <End Role="aspnet_Applications" Type="Model.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="Model.Store.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__17C286CF">
+    <End Role="aspnet_Roles" Type="Model.Store.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Model.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__16CE6296">
+    <End Role="aspnet_Users" Type="Model.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Model.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Model.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Model.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="Model.Store.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Model.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK00">
+    <End Role="Compradores" Type="Model.Store.Compradores" Multiplicity="0..1" />
+    <End Role="FormasComercializacion" Type="Model.Store.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compradores">
+        <PropertyRef Name="CodComprador" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodComprador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK01">
+    <End Role="Grupos" Type="Model.Store.Grupos" Multiplicity="0..1" />
+    <End Role="FormasComercializacion" Type="Model.Store.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK02">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="FormasComercializacion" Type="Model.Store.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK03">
+    <End Role="Productos" Type="Model.Store.Productos" Multiplicity="1" />
+    <End Role="FormasComercializacion" Type="Model.Store.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Grupos_FK00">
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="0..1" />
+    <End Role="Grupos" Type="Model.Store.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Grupos_FK01">
+    <End Role="Tipos de Grupos" Type="Model.Store.Tipos de Grupos" Multiplicity="0..1" />
+    <End Role="Grupos" Type="Model.Store.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipos de Grupos">
+        <PropertyRef Name="IdTipoGrupo" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="IdTipoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Loc_FK00">
+    <End Role="Dptos" Type="Model.Store.Dptos" Multiplicity="0..1" />
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dptos">
+        <PropertyRef Name="CodDpto" />
+      </Principal>
+      <Dependent Role="Loc">
+        <PropertyRef Name="CodDpto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ManejoColmenar_FK00">
+    <End Role="Enfermedades" Type="Model.Store.Enfermedades" Multiplicity="1" />
+    <End Role="ManejoColmenar" Type="Model.Store.ManejoColmenar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enfermedades">
+        <PropertyRef Name="CodEnfermedad" />
+      </Principal>
+      <Dependent Role="ManejoColmenar">
+        <PropertyRef Name="CodEnfermedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ManejoColmenar_FK01">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="ManejoColmenar" Type="Model.Store.ManejoColmenar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ManejoColmenar">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MovSalasExtraccion_FK00">
+    <End Role="SalasExtracción" Type="Model.Store.SalasExtracción" Multiplicity="1" />
+    <End Role="MovSalasExtraccion" Type="Model.Store.MovSalasExtraccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasExtracción">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="MovSalasExtraccion">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillaCampo_FK00">
+    <End Role="Apiarios" Type="Model.Store.Apiarios" Multiplicity="1" />
+    <End Role="PlanillaCampo" Type="Model.Store.PlanillaCampo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apiarios">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Principal>
+      <Dependent Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillaCampo_FK01">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="PlanillaCampo" Type="Model.Store.PlanillaCampo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillasMovimientos_FK00">
+    <End Role="PlanillaCampo" Type="Model.Store.PlanillaCampo" Multiplicity="1" />
+    <End Role="PlanillasMovimientos" Type="Model.Store.PlanillasMovimientos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Principal>
+      <Dependent Role="PlanillasMovimientos">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillasMovimientos_FK01">
+    <End Role="Productos" Type="Model.Store.Productos" Multiplicity="0..1" />
+    <End Role="PlanillasMovimientos" Type="Model.Store.PlanillasMovimientos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="PlanillasMovimientos">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PrevalenciaVarroa_FK00">
+    <End Role="PlanillaCampo" Type="Model.Store.PlanillaCampo" Multiplicity="1" />
+    <End Role="PrevalenciaVarroa" Type="Model.Store.PrevalenciaVarroa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Principal>
+      <Dependent Role="PrevalenciaVarroa">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Productores_FK00">
+    <End Role="Grupos" Type="Model.Store.Grupos" Multiplicity="0..1" />
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="Productores">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Productores_FK01">
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="0..1" />
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Productores">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosOfrecidosProv_FK00">
+    <End Role="Productos" Type="Model.Store.Productos" Multiplicity="1" />
+    <End Role="ProductosOfrecidosProv" Type="Model.Store.ProductosOfrecidosProv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="ProductosOfrecidosProv">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosOfrecidosProv_FK01">
+    <End Role="ProveedoresMatInerte" Type="Model.Store.ProveedoresMatInerte" Multiplicity="1" />
+    <End Role="ProductosOfrecidosProv" Type="Model.Store.ProductosOfrecidosProv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresMatInerte">
+        <PropertyRef Name="NroRegistroInerte" />
+      </Principal>
+      <Dependent Role="ProductosOfrecidosProv">
+        <PropertyRef Name="NroRegistroInerte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosProvVivo_FK00">
+    <End Role="Productos" Type="Model.Store.Productos" Multiplicity="1" />
+    <End Role="ProductosProvVivo" Type="Model.Store.ProductosProvVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="ProductosProvVivo">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosProvVivo_FK01">
+    <End Role="ProveedoresMatVivo" Type="Model.Store.ProveedoresMatVivo" Multiplicity="1" />
+    <End Role="ProductosProvVivo" Type="Model.Store.ProductosProvVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresMatVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Principal>
+      <Dependent Role="ProductosProvVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProveedoresMatInerte_FK00">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="0..1" />
+    <End Role="ProveedoresMatInerte" Type="Model.Store.ProveedoresMatInerte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ProveedoresMatInerte">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProveedoresMatVivo_FK00">
+    <End Role="Apiarios" Type="Model.Store.Apiarios" Multiplicity="0..1" />
+    <End Role="ProveedoresMatVivo" Type="Model.Store.ProveedoresMatVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apiarios">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Principal>
+      <Dependent Role="ProveedoresMatVivo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RemediosPorProductor_FK00">
+    <End Role="Productores" Type="Model.Store.Productores" Multiplicity="1" />
+    <End Role="RemediosPorProductor" Type="Model.Store.RemediosPorProductor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="RemediosPorProductor">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RemediosPorProductor_FK01">
+    <End Role="Remedios" Type="Model.Store.Remedios" Multiplicity="1" />
+    <End Role="RemediosPorProductor" Type="Model.Store.RemediosPorProductor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remedios">
+        <PropertyRef Name="CodRem" />
+      </Principal>
+      <Dependent Role="RemediosPorProductor">
+        <PropertyRef Name="CodRem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcFraccMovimientoDe_FK00">
+    <End Role="SalaProcYFraccMovimiento" Type="Model.Store.SalaProcYFraccMovimiento" Multiplicity="1" />
+    <End Role="SalaProcFraccMovimientoDel" Type="Model.Store.SalaProcFraccMovimientoDel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalaProcYFraccMovimiento">
+        <PropertyRef Name="NroEstablecimiento" />
+        <PropertyRef Name="Año" />
+        <PropertyRef Name="Mes" />
+      </Principal>
+      <Dependent Role="SalaProcFraccMovimientoDel">
+        <PropertyRef Name="NroEstablecimiento" />
+        <PropertyRef Name="Año" />
+        <PropertyRef Name="Mes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcFraccMovimientoDe_FK01">
+    <End Role="SalasExtracción" Type="Model.Store.SalasExtracción" Multiplicity="0..1" />
+    <End Role="SalaProcFraccMovimientoDel" Type="Model.Store.SalaProcFraccMovimientoDel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasExtracción">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="SalaProcFraccMovimientoDel">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcYFraccMovimiento_FK00">
+    <End Role="SalasProcFracc" Type="Model.Store.SalasProcFracc" Multiplicity="1" />
+    <End Role="SalaProcYFraccMovimiento" Type="Model.Store.SalaProcYFraccMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasProcFracc">
+        <PropertyRef Name="NroEstablecimiento" />
+      </Principal>
+      <Dependent Role="SalaProcYFraccMovimiento">
+        <PropertyRef Name="NroEstablecimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK00">
+    <End Role="Grupos" Type="Model.Store.Grupos" Multiplicity="0..1" />
+    <End Role="SalasExtracción" Type="Model.Store.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK01">
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="0..1" />
+    <End Role="SalasExtracción" Type="Model.Store.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK02">
+    <End Role="TiposSalas" Type="Model.Store.TiposSalas" Multiplicity="1" />
+    <End Role="SalasExtracción" Type="Model.Store.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposSalas">
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasProcFracc_FK00">
+    <End Role="Loc" Type="Model.Store.Loc" Multiplicity="0..1" />
+    <End Role="SalasProcFracc" Type="Model.Store.SalasProcFracc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="SalasProcFracc">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'Sistema_Apicola SQL.dbo.Productores_ErroresDeExportación' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="Productores_ErroresDeExportación">
+        <Property Name="Campo" Type="nvarchar" MaxLength="255" />
+        <Property Name="Error" Type="nvarchar" MaxLength="255" />
+        <Property Name="Fila" Type="int" />
+      </EntityType>-->
+</Schema>

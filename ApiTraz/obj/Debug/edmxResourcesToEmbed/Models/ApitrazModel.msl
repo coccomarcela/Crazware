@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApitrazModelStoreContainer" CdmEntityContainer="ApitrazEntities">
+    <EntitySetMapping Name="ActProductivas">
+      <EntityTypeMapping TypeName="ApitrazModel.ActProductivas">
+        <MappingFragment StoreEntitySet="ActProductivas">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="Cant" ColumnName="Cant" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Apiarios">
+      <EntityTypeMapping TypeName="ApitrazModel.Apiarios">
+        <MappingFragment StoreEntitySet="Apiarios">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="NroApiario" ColumnName="NroApiario" />
+          <ScalarProperty Name="Ubicación" ColumnName="Ubicación" />
+          <ScalarProperty Name="Geoposición" ColumnName="Geoposición" />
+          <ScalarProperty Name="NroColmenas" ColumnName="NroColmenas" />
+          <ScalarProperty Name="RENSPA" ColumnName="RENSPA" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsesorTecnico">
+      <EntityTypeMapping TypeName="ApitrazModel.AsesorTecnico">
+        <MappingFragment StoreEntitySet="AsesorTecnico">
+          <ScalarProperty Name="IdTecnico" ColumnName="IdTecnico" />
+          <ScalarProperty Name="TecNom" ColumnName="TecNom" />
+          <ScalarProperty Name="TecOrg" ColumnName="TecOrg" />
+          <ScalarProperty Name="TecTel" ColumnName="TecTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compradores">
+      <EntityTypeMapping TypeName="ApitrazModel.Compradores">
+        <MappingFragment StoreEntitySet="Compradores">
+          <ScalarProperty Name="CodComprador" ColumnName="CodComprador" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CompDir" ColumnName="CompDir" />
+          <ScalarProperty Name="CompTel" ColumnName="CompTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlSanitario">
+      <EntityTypeMapping TypeName="ApitrazModel.ControlSanitario">
+        <MappingFragment StoreEntitySet="ControlSanitario">
+          <ScalarProperty Name="IdControl" ColumnName="IdControl" />
+          <ScalarProperty Name="NroRegistroVivo" ColumnName="NroRegistroVivo" />
+          <ScalarProperty Name="IdTecnico" ColumnName="IdTecnico" />
+          <ScalarProperty Name="ControSfecha" ColumnName="ControSfecha" />
+          <ScalarProperty Name="ControlSobs" ColumnName="ControlSobs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuencas">
+      <EntityTypeMapping TypeName="ApitrazModel.Cuencas">
+        <MappingFragment StoreEntitySet="Cuencas">
+          <ScalarProperty Name="codcuenca" ColumnName="codcuenca" />
+          <ScalarProperty Name="cuenca" ColumnName="cuenca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dptos">
+      <EntityTypeMapping TypeName="ApitrazModel.Dptos">
+        <MappingFragment StoreEntitySet="Dptos">
+          <ScalarProperty Name="CodDpto" ColumnName="CodDpto" />
+          <ScalarProperty Name="Dpto" ColumnName="Dpto" />
+          <ScalarProperty Name="codcuenca" ColumnName="codcuenca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enfermedades">
+      <EntityTypeMapping TypeName="ApitrazModel.Enfermedades">
+        <MappingFragment StoreEntitySet="Enfermedades">
+          <ScalarProperty Name="CodEnfermedad" ColumnName="CodEnfermedad" />
+          <ScalarProperty Name="Enfermedad" ColumnName="Enfermedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasComercializacion">
+      <EntityTypeMapping TypeName="ApitrazModel.FormasComercializacion">
+        <MappingFragment StoreEntitySet="FormasComercializacion">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="CodComprador" ColumnName="CodComprador" />
+          <ScalarProperty Name="CodGrupo" ColumnName="CodGrupo" />
+          <ScalarProperty Name="Directa" ColumnName="Directa" />
+          <ScalarProperty Name="Otras" ColumnName="Otras" />
+          <ScalarProperty Name="Comprador" ColumnName="Comprador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="ApitrazModel.Grupos">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="CodGrupo" ColumnName="CodGrupo" />
+          <ScalarProperty Name="IdTipoGrupo" ColumnName="IdTipoGrupo" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="CUIT" ColumnName="CUIT" />
+          <ScalarProperty Name="Dirección" ColumnName="Dirección" />
+          <ScalarProperty Name="Teléfono" ColumnName="Teléfono" />
+          <ScalarProperty Name="GCorreoElec" ColumnName="GCorreoElec" />
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laboratorio">
+      <EntityTypeMapping TypeName="ApitrazModel.Laboratorio">
+        <MappingFragment StoreEntitySet="Laboratorio">
+          <ScalarProperty Name="CodLab" ColumnName="CodLab" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laboratorio_movimiento">
+      <EntityTypeMapping TypeName="ApitrazModel.Laboratorio_movimiento">
+        <MappingFragment StoreEntitySet="Laboratorio movimiento">
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="CodLab" ColumnName="CodLab" />
+          <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="CodTipoAnalisis" ColumnName="CodTipoAnalisis" />
+          <ScalarProperty Name="Fecha_de_Extraccion" ColumnName="Fecha de Extraccion" />
+          <ScalarProperty Name="Fecha_analisis" ColumnName="Fecha analisis" />
+          <ScalarProperty Name="Nro_de_muestra" ColumnName="Nro de muestra" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="Tambor" ColumnName="Tambor" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loc">
+      <EntityTypeMapping TypeName="ApitrazModel.Loc">
+        <MappingFragment StoreEntitySet="Loc">
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+          <ScalarProperty Name="Loc1" ColumnName="Loc" />
+          <ScalarProperty Name="CodDpto" ColumnName="CodDpto" />
+          <ScalarProperty Name="codpos" ColumnName="codpos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManejoColmenar">
+      <EntityTypeMapping TypeName="ApitrazModel.ManejoColmenar">
+        <MappingFragment StoreEntitySet="ManejoColmenar">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="CodEnfermedad" ColumnName="CodEnfermedad" />
+          <ScalarProperty Name="Preven" ColumnName="Preven" />
+          <ScalarProperty Name="Cura" ColumnName="Cura" />
+          <ScalarProperty Name="Otoño" ColumnName="Otoño" />
+          <ScalarProperty Name="Primavera" ColumnName="Primavera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovSalasExtraccion">
+      <EntityTypeMapping TypeName="ApitrazModel.MovSalasExtraccion">
+        <MappingFragment StoreEntitySet="MovSalasExtraccion">
+          <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+          <ScalarProperty Name="MovSObs" ColumnName="MovSObs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovSalasExtraccionDet">
+      <EntityTypeMapping TypeName="ApitrazModel.MovSalasExtraccionDet">
+        <MappingFragment StoreEntitySet="MovSalasExtraccionDet">
+          <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="SENroItem" ColumnName="SENroItem" />
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="MediaAlzas" ColumnName="MediaAlzas" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="KiloObtenido" ColumnName="KiloObtenido" />
+          <ScalarProperty Name="NumAlzas" ColumnName="NumAlzas" />
+          <ScalarProperty Name="SEPresentacion" ColumnName="SEPresentacion" />
+          <ScalarProperty Name="SECantEnvases" ColumnName="SECantEnvases" />
+          <ScalarProperty Name="SEtotalKgs" ColumnName="SEtotalKgs" />
+          <ScalarProperty Name="SENroLote" ColumnName="SENroLote" />
+          <ScalarProperty Name="SEDocAmparo" ColumnName="SEDocAmparo" />
+          <ScalarProperty Name="CodComprador" ColumnName="CodComprador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaCampo">
+      <EntityTypeMapping TypeName="ApitrazModel.PlanillaCampo">
+        <MappingFragment StoreEntitySet="PlanillaCampo">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="NroApiario" ColumnName="NroApiario" />
+          <ScalarProperty Name="AñoInicio" ColumnName="AñoInicio" />
+          <ScalarProperty Name="AñoFin" ColumnName="AñoFin" />
+          <ScalarProperty Name="ColmenasInicio" ColumnName="ColmenasInicio" />
+          <ScalarProperty Name="ColmenasRevisadas" ColumnName="ColmenasRevisadas" />
+          <ScalarProperty Name="ColmenasDescartadas" ColumnName="ColmenasDescartadas" />
+          <ScalarProperty Name="CCpromedio" ColumnName="CCpromedio" />
+          <ScalarProperty Name="CMpromedio" ColumnName="CMpromedio" />
+          <ScalarProperty Name="ColmenasI" ColumnName="ColmenasI" />
+          <ScalarProperty Name="ColmenasII" ColumnName="ColmenasII" />
+          <ScalarProperty Name="ColemenasIII" ColumnName="ColemenasIII" />
+          <ScalarProperty Name="LoqueAmer" ColumnName="LoqueAmer" />
+          <ScalarProperty Name="LoqueEur" ColumnName="LoqueEur" />
+          <ScalarProperty Name="CriaEnsacada" ColumnName="CriaEnsacada" />
+          <ScalarProperty Name="CriaYesificada" ColumnName="CriaYesificada" />
+          <ScalarProperty Name="Otras" ColumnName="Otras" />
+          <ScalarProperty Name="Huerfanas" ColumnName="Huerfanas" />
+          <ScalarProperty Name="Zangueras" ColumnName="Zangueras" />
+          <ScalarProperty Name="Muertas" ColumnName="Muertas" />
+          <ScalarProperty Name="FechaOtonoAnt" ColumnName="FechaOtonoAnt" />
+          <ScalarProperty Name="ProductoOtonoAnt" ColumnName="ProductoOtonoAnt" />
+          <ScalarProperty Name="FechaTratActual" ColumnName="FechaTratActual" />
+          <ScalarProperty Name="ProductoTratActual" ColumnName="ProductoTratActual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillasMovimientos">
+      <EntityTypeMapping TypeName="ApitrazModel.PlanillasMovimientos">
+        <MappingFragment StoreEntitySet="PlanillasMovimientos">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="NroApiario" ColumnName="NroApiario" />
+          <ScalarProperty Name="AñoInicio" ColumnName="AñoInicio" />
+          <ScalarProperty Name="AñoFin" ColumnName="AñoFin" />
+          <ScalarProperty Name="CodItem" ColumnName="CodItem" />
+          <ScalarProperty Name="PlFecha" ColumnName="PlFecha" />
+          <ScalarProperty Name="PlNucleo" ColumnName="PlNucleo" />
+          <ScalarProperty Name="PlColmenas" ColumnName="PlColmenas" />
+          <ScalarProperty Name="PlTipoAlimento" ColumnName="PlTipoAlimento" />
+          <ScalarProperty Name="PlCantColmenas" ColumnName="PlCantColmenas" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="PlDosis" ColumnName="PlDosis" />
+          <ScalarProperty Name="PlTipoMultipl" ColumnName="PlTipoMultipl" />
+          <ScalarProperty Name="PlCantMultipl" ColumnName="PlCantMultipl" />
+          <ScalarProperty Name="PlOrigenDest" ColumnName="PlOrigenDest" />
+          <ScalarProperty Name="PlMediasAlzas" ColumnName="PlMediasAlzas" />
+          <ScalarProperty Name="PlReinas" ColumnName="PlReinas" />
+          <ScalarProperty Name="PlCantMediaAlza" ColumnName="PlCantMediaAlza" />
+          <ScalarProperty Name="SEKgsNetos" ColumnName="SEKgsNetos" />
+          <ScalarProperty Name="SEobs" ColumnName="SEobs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrevalenciaVarroa">
+      <EntityTypeMapping TypeName="ApitrazModel.PrevalenciaVarroa">
+        <MappingFragment StoreEntitySet="PrevalenciaVarroa">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="NroApiario" ColumnName="NroApiario" />
+          <ScalarProperty Name="AñoInicio" ColumnName="AñoInicio" />
+          <ScalarProperty Name="AñoFin" ColumnName="AñoFin" />
+          <ScalarProperty Name="ColmenaNum" ColumnName="ColmenaNum" />
+          <ScalarProperty Name="AbejasDetectAnt" ColumnName="AbejasDetectAnt" />
+          <ScalarProperty Name="AbejasDetecDesp" ColumnName="AbejasDetecDesp" />
+          <ScalarProperty Name="VarroaDetecAnt" ColumnName="VarroaDetecAnt" />
+          <ScalarProperty Name="VarroaDetecDesp" ColumnName="VarroaDetecDesp" />
+          <ScalarProperty Name="PorcetajeAnt" ColumnName="PorcetajeAnt" />
+          <ScalarProperty Name="PorcentajeDesp" ColumnName="PorcentajeDesp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productores">
+      <EntityTypeMapping TypeName="ApitrazModel.Productores">
+        <MappingFragment StoreEntitySet="Productores">
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="fechains" ColumnName="fechains" />
+          <ScalarProperty Name="fechavenc" ColumnName="fechavenc" />
+          <ScalarProperty Name="ape" ColumnName="ape" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="dom" ColumnName="dom" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+          <ScalarProperty Name="TratamientosSanitarios" ColumnName="TratamientosSanitarios" />
+          <ScalarProperty Name="TipoRemedios" ColumnName="TipoRemedios" />
+          <ScalarProperty Name="CodGrupo" ColumnName="CodGrupo" />
+          <ScalarProperty Name="Cuit" ColumnName="Cuit" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Carnet" ColumnName="Carnet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="ApitrazModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="Prod" ColumnName="Prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductosProvVivo">
+      <EntityTypeMapping TypeName="ApitrazModel.ProductosProvVivo">
+        <MappingFragment StoreEntitySet="ProductosProvVivo">
+          <ScalarProperty Name="NroRegistroVivo" ColumnName="NroRegistroVivo" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="ProvProtocolo" ColumnName="ProvProtocolo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedoresMatInerte">
+      <EntityTypeMapping TypeName="ApitrazModel.ProveedoresMatInerte">
+        <MappingFragment StoreEntitySet="ProveedoresMatInerte">
+          <ScalarProperty Name="NroRegistroInerte" ColumnName="NroRegistroInerte" />
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="ProvApeIn" ColumnName="ProvApeIn" />
+          <ScalarProperty Name="ProvNomIn" ColumnName="ProvNomIn" />
+          <ScalarProperty Name="ProvDomIn" ColumnName="ProvDomIn" />
+          <ScalarProperty Name="ProvDomLeIn" ColumnName="ProvDomLeIn" />
+          <ScalarProperty Name="ProvTeleIn" ColumnName="ProvTeleIn" />
+          <ScalarProperty Name="ProvFaxIn" ColumnName="ProvFaxIn" />
+          <ScalarProperty Name="ProvObsIn" ColumnName="ProvObsIn" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedoresMatVivo">
+      <EntityTypeMapping TypeName="ApitrazModel.ProveedoresMatVivo">
+        <MappingFragment StoreEntitySet="ProveedoresMatVivo">
+          <ScalarProperty Name="NroRegistroVivo" ColumnName="NroRegistroVivo" />
+          <ScalarProperty Name="ren" ColumnName="ren" />
+          <ScalarProperty Name="NroApiario" ColumnName="NroApiario" />
+          <ScalarProperty Name="ProvObsVivo" ColumnName="ProvObsVivo" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+          <ScalarProperty Name="Correo_Eletronico" ColumnName="Correo Eletronico" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remedios">
+      <EntityTypeMapping TypeName="ApitrazModel.Remedios">
+        <MappingFragment StoreEntitySet="Remedios">
+          <ScalarProperty Name="CodRem" ColumnName="CodRem" />
+          <ScalarProperty Name="Remedio" ColumnName="Remedio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaProcFraccMovimientoDel">
+      <EntityTypeMapping TypeName="ApitrazModel.SalaProcFraccMovimientoDel">
+        <MappingFragment StoreEntitySet="SalaProcFraccMovimientoDel">
+          <ScalarProperty Name="NroEstablecimiento" ColumnName="NroEstablecimiento" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="SPFNroItem" ColumnName="SPFNroItem" />
+          <ScalarProperty Name="SPFFecha" ColumnName="SPFFecha" />
+          <ScalarProperty Name="ProcEnPlanta" ColumnName="ProcEnPlanta" />
+          <ScalarProperty Name="SPFNroLoteFinal" ColumnName="SPFNroLoteFinal" />
+          <ScalarProperty Name="SPFPresentación" ColumnName="SPFPresentación" />
+          <ScalarProperty Name="SPFCantEnvases" ColumnName="SPFCantEnvases" />
+          <ScalarProperty Name="SPFTotalKgs" ColumnName="SPFTotalKgs" />
+          <ScalarProperty Name="SPFDocAmparo" ColumnName="SPFDocAmparo" />
+          <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaProcYFraccMovimiento">
+      <EntityTypeMapping TypeName="ApitrazModel.SalaProcYFraccMovimiento">
+        <MappingFragment StoreEntitySet="SalaProcYFraccMovimiento">
+          <ScalarProperty Name="NroEstablecimiento" ColumnName="NroEstablecimiento" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalasExtracción">
+      <EntityTypeMapping TypeName="ApitrazModel.SalasExtracción">
+        <MappingFragment StoreEntitySet="SalasExtracción">
+          <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+          <ScalarProperty Name="Dueño" ColumnName="Dueño" />
+          <ScalarProperty Name="Telfijo" ColumnName="Telfijo" />
+          <ScalarProperty Name="Telmovil" ColumnName="Telmovil" />
+          <ScalarProperty Name="CorreoElec" ColumnName="CorreoElec" />
+          <ScalarProperty Name="CodGrupo" ColumnName="CodGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalasProcFracc">
+      <EntityTypeMapping TypeName="ApitrazModel.SalasProcFracc">
+        <MappingFragment StoreEntitySet="SalasProcFracc">
+          <ScalarProperty Name="NroEstablecimiento" ColumnName="NroEstablecimiento" />
+          <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_de_analisis">
+      <EntityTypeMapping TypeName="ApitrazModel.Tipos_de_analisis">
+        <MappingFragment StoreEntitySet="Tipos de analisis">
+          <ScalarProperty Name="CodTipoAnalisis" ColumnName="CodTipoAnalisis" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Rango_de_valores" ColumnName="Rango de valores" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_de_Grupos">
+      <EntityTypeMapping TypeName="ApitrazModel.Tipos_de_Grupos">
+        <MappingFragment StoreEntitySet="Tipos de Grupos">
+          <ScalarProperty Name="IdTipoGrupo" ColumnName="IdTipoGrupo" />
+          <ScalarProperty Name="TipoGrupo" ColumnName="TipoGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposSalas">
+      <EntityTypeMapping TypeName="ApitrazModel.TiposSalas">
+        <MappingFragment StoreEntitySet="TiposSalas">
+          <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
+          <ScalarProperty Name="tipoSala" ColumnName="tipoSala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProductosOfrecidosProv" TypeName="ApitrazModel.ProductosOfrecidosProv" StoreEntitySet="ProductosOfrecidosProv">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+      </EndProperty>
+      <EndProperty Name="ProveedoresMatInerte">
+        <ScalarProperty Name="NroRegistroInerte" ColumnName="NroRegistroInerte" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RemediosPorProductor" TypeName="ApitrazModel.RemediosPorProductor" StoreEntitySet="RemediosPorProductor">
+      <EndProperty Name="Productores">
+        <ScalarProperty Name="ren" ColumnName="ren" />
+      </EndProperty>
+      <EndProperty Name="Remedios">
+        <ScalarProperty Name="CodRem" ColumnName="CodRem" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

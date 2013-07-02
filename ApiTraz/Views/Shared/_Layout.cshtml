@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+
+
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Mi aplicación ASP.NET MVC</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+ 
+        @Styles.Render("~/Content/bootstrap") 
+	    @Scripts.Render("~/bundles/modernizr")
+
+
+    </head>
+
+
+
+ <body>
+ 
+  
+@*<!--1)Imagen de Fondo-->
+   <img alt="fondo" src="~/images/FondoPage2.png"  id="full-screen-background-image" />  
+*@
+<!--2)Cabecera Header-->
+<header>
+   
+            <div class="row" id="Cabecera">
+                <div class="span10">
+                    <img src="~/Images/Banner-Apicola.png" class="img-rounded" alt="Logo Corrientes Miel">
+                </div>
+                <div class="span2">
+               @*   @Html.Partial("_LoginPartial")*@
+                </div>
+            </div>
+         
+         @Html.Partial("_Menu")
+        
+</header>
+
+
+<!--3)Cuerpo-->
+ <div class="container-fluid" id="mbody">
+
+       
+  <div class="row-fluid"">
+  
+    <div class="span10" id="contenido">
+      <!--Body content-->
+        @RenderBody()
+ @RenderSection("featured", required: false)
+
+
+    </div>
+
+      <div class="span2" id="barralateral">
+   
+      <!--Sidebar content-->
+      @Html.Partial("_LoginPartial")
+   
+    </div>
+
+  </div>
+
+
+ 
+</div>
+
+
+<footer >    
+<!--3)Pie Footer-->
+ <div class="container-fluid">
+
+  <div class="row-fluid">
+    <div  class="span12">
+     <a class="brand" href="http://crazware.com/" >
+           
+    <img src="../../Images/logo-crazware-Letras.png" alt="crazware-logo"/>
+   
+         </a>   | contacto@crazware.com | Argentina-Corrientes CP: 3400 | +54 3794 729622 |
+     
+  
+    </div>
+  </div>
+
+  </div>
+</footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        
+        @Scripts.Render("~/bundles/bootstrap")
+
+        @Scripts.Render("~/bundles/jqueryui")
+
+ 
+
+  	
+
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

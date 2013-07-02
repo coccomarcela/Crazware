@@ -1,0 +1,31 @@
+﻿
+ <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href=@Url.Action("Index", "Home")>ApiTraz
+               @* <img src="~/Images/Logo-Apicola8070.png" class="img-rounded" alt="Logo Corrientes Miel">*@
+                </a>
+
+
+
+                <ul class="nav">
+    
+                    <li>@Html.ActionLink("Inicio", "Index", "Home",new {@class="active" })</li>
+                    <li>@Html.ActionLink("Productores", "Index", "Productor")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          Productores
+                          <b class="caret"></b>
+                        </a>
+                    <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Listado", "Index", "Productor")</li>
+                                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    </ul>
+                    </li> @*"dropdown"*@
+                   
+                </ul>
+              </div>
+</div>

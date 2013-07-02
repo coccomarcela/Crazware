@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApitrazModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ApitrazEntities" annotation:LazyLoadingEnabled="false">
+    <EntitySet Name="ActProductivas" EntityType="ApitrazModel.ActProductivas" />
+    <EntitySet Name="Apiarios" EntityType="ApitrazModel.Apiarios" />
+    <EntitySet Name="AsesorTecnico" EntityType="ApitrazModel.AsesorTecnico" />
+    <EntitySet Name="Compradores" EntityType="ApitrazModel.Compradores" />
+    <EntitySet Name="ControlSanitario" EntityType="ApitrazModel.ControlSanitario" />
+    <EntitySet Name="Cuencas" EntityType="ApitrazModel.Cuencas" />
+    <EntitySet Name="Dptos" EntityType="ApitrazModel.Dptos" />
+    <EntitySet Name="Enfermedades" EntityType="ApitrazModel.Enfermedades" />
+    <EntitySet Name="FormasComercializacion" EntityType="ApitrazModel.FormasComercializacion" />
+    <EntitySet Name="Grupos" EntityType="ApitrazModel.Grupos" />
+    <EntitySet Name="Laboratorio" EntityType="ApitrazModel.Laboratorio" />
+    <EntitySet Name="Laboratorio_movimiento" EntityType="ApitrazModel.Laboratorio_movimiento" />
+    <EntitySet Name="Loc" EntityType="ApitrazModel.Loc" />
+    <EntitySet Name="ManejoColmenar" EntityType="ApitrazModel.ManejoColmenar" />
+    <EntitySet Name="MovSalasExtraccion" EntityType="ApitrazModel.MovSalasExtraccion" />
+    <EntitySet Name="MovSalasExtraccionDet" EntityType="ApitrazModel.MovSalasExtraccionDet" />
+    <EntitySet Name="PlanillaCampo" EntityType="ApitrazModel.PlanillaCampo" />
+    <EntitySet Name="PlanillasMovimientos" EntityType="ApitrazModel.PlanillasMovimientos" />
+    <EntitySet Name="PrevalenciaVarroa" EntityType="ApitrazModel.PrevalenciaVarroa" />
+    <EntitySet Name="Productores" EntityType="ApitrazModel.Productores" />
+    <EntitySet Name="Productos" EntityType="ApitrazModel.Productos" />
+    <EntitySet Name="ProductosProvVivo" EntityType="ApitrazModel.ProductosProvVivo" />
+    <EntitySet Name="ProveedoresMatInerte" EntityType="ApitrazModel.ProveedoresMatInerte" />
+    <EntitySet Name="ProveedoresMatVivo" EntityType="ApitrazModel.ProveedoresMatVivo" />
+    <EntitySet Name="Remedios" EntityType="ApitrazModel.Remedios" />
+    <EntitySet Name="SalaProcFraccMovimientoDel" EntityType="ApitrazModel.SalaProcFraccMovimientoDel" />
+    <EntitySet Name="SalaProcYFraccMovimiento" EntityType="ApitrazModel.SalaProcYFraccMovimiento" />
+    <EntitySet Name="SalasExtracción" EntityType="ApitrazModel.SalasExtracción" />
+    <EntitySet Name="SalasProcFracc" EntityType="ApitrazModel.SalasProcFracc" />
+    <EntitySet Name="Tipos_de_analisis" EntityType="ApitrazModel.Tipos_de_analisis" />
+    <EntitySet Name="Tipos_de_Grupos" EntityType="ApitrazModel.Tipos_de_Grupos" />
+    <EntitySet Name="TiposSalas" EntityType="ApitrazModel.TiposSalas" />
+    <AssociationSet Name="ActProductivas_FK00" Association="ApitrazModel.ActProductivas_FK00">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ActProductivas" EntitySet="ActProductivas" />
+    </AssociationSet>
+    <AssociationSet Name="ActProductivas_FK01" Association="ApitrazModel.ActProductivas_FK01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ActProductivas" EntitySet="ActProductivas" />
+    </AssociationSet>
+    <AssociationSet Name="Apiarios_FK00" Association="ApitrazModel.Apiarios_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Apiarios" EntitySet="Apiarios" />
+    </AssociationSet>
+    <AssociationSet Name="Apiarios_FK01" Association="ApitrazModel.Apiarios_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="Apiarios" EntitySet="Apiarios" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillaCampo_FK00" Association="ApitrazModel.PlanillaCampo_FK00">
+      <End Role="Apiarios" EntitySet="Apiarios" />
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+    </AssociationSet>
+    <AssociationSet Name="ProveedoresMatVivo_FK00" Association="ApitrazModel.ProveedoresMatVivo_FK00">
+      <End Role="Apiarios" EntitySet="Apiarios" />
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+    </AssociationSet>
+    <AssociationSet Name="ControlSanitario_FK00" Association="ApitrazModel.ControlSanitario_FK00">
+      <End Role="AsesorTecnico" EntitySet="AsesorTecnico" />
+      <End Role="ControlSanitario" EntitySet="ControlSanitario" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK00" Association="ApitrazModel.FormasComercializacion_FK00">
+      <End Role="Compradores" EntitySet="Compradores" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="ControlSanitario_FK01" Association="ApitrazModel.ControlSanitario_FK01">
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+      <End Role="ControlSanitario" EntitySet="ControlSanitario" />
+    </AssociationSet>
+    <AssociationSet Name="Dptos_FK00" Association="ApitrazModel.Dptos_FK00">
+      <End Role="Cuencas" EntitySet="Cuencas" />
+      <End Role="Dptos" EntitySet="Dptos" />
+    </AssociationSet>
+    <AssociationSet Name="Loc_FK00" Association="ApitrazModel.Loc_FK00">
+      <End Role="Dptos" EntitySet="Dptos" />
+      <End Role="Loc" EntitySet="Loc" />
+    </AssociationSet>
+    <AssociationSet Name="ManejoColmenar_FK00" Association="ApitrazModel.ManejoColmenar_FK00">
+      <End Role="Enfermedades" EntitySet="Enfermedades" />
+      <End Role="ManejoColmenar" EntitySet="ManejoColmenar" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK01" Association="ApitrazModel.FormasComercializacion_FK01">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK02" Association="ApitrazModel.FormasComercializacion_FK02">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="FormasComercializacion_FK03" Association="ApitrazModel.FormasComercializacion_FK03">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="FormasComercializacion" EntitySet="FormasComercializacion" />
+    </AssociationSet>
+    <AssociationSet Name="Grupos_FK00" Association="ApitrazModel.Grupos_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="Grupos_FK01" Association="ApitrazModel.Grupos_FK01">
+      <End Role="Tipos_de_Grupos" EntitySet="Tipos_de_Grupos" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="Productores_FK00" Association="ApitrazModel.Productores_FK00">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Productores" EntitySet="Productores" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK00" Association="ApitrazModel.SalasExtracción_FK00">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="Productores_FK01" Association="ApitrazModel.Productores_FK01">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="Productores" EntitySet="Productores" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK01" Association="ApitrazModel.SalasExtracción_FK01">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="SalasProcFracc_FK00" Association="ApitrazModel.SalasProcFracc_FK00">
+      <End Role="Loc" EntitySet="Loc" />
+      <End Role="SalasProcFracc" EntitySet="SalasProcFracc" />
+    </AssociationSet>
+    <AssociationSet Name="ManejoColmenar_FK01" Association="ApitrazModel.ManejoColmenar_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ManejoColmenar" EntitySet="ManejoColmenar" />
+    </AssociationSet>
+    <AssociationSet Name="MovSalasExtraccion_FK00" Association="ApitrazModel.MovSalasExtraccion_FK00">
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="MovSalasExtraccion" EntitySet="MovSalasExtraccion" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillaCampo_FK01" Association="ApitrazModel.PlanillaCampo_FK01">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillasMovimientos_FK00" Association="ApitrazModel.PlanillasMovimientos_FK00">
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+      <End Role="PlanillasMovimientos" EntitySet="PlanillasMovimientos" />
+    </AssociationSet>
+    <AssociationSet Name="PrevalenciaVarroa_FK00" Association="ApitrazModel.PrevalenciaVarroa_FK00">
+      <End Role="PlanillaCampo" EntitySet="PlanillaCampo" />
+      <End Role="PrevalenciaVarroa" EntitySet="PrevalenciaVarroa" />
+    </AssociationSet>
+    <AssociationSet Name="PlanillasMovimientos_FK01" Association="ApitrazModel.PlanillasMovimientos_FK01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="PlanillasMovimientos" EntitySet="PlanillasMovimientos" />
+    </AssociationSet>
+    <AssociationSet Name="ProveedoresMatInerte_FK00" Association="ApitrazModel.ProveedoresMatInerte_FK00">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="ProveedoresMatInerte" EntitySet="ProveedoresMatInerte" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosProvVivo_FK00" Association="ApitrazModel.ProductosProvVivo_FK00">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ProductosProvVivo" EntitySet="ProductosProvVivo" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosProvVivo_FK01" Association="ApitrazModel.ProductosProvVivo_FK01">
+      <End Role="ProveedoresMatVivo" EntitySet="ProveedoresMatVivo" />
+      <End Role="ProductosProvVivo" EntitySet="ProductosProvVivo" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcFraccMovimientoDe_FK00" Association="ApitrazModel.SalaProcFraccMovimientoDe_FK00">
+      <End Role="SalaProcYFraccMovimiento" EntitySet="SalaProcYFraccMovimiento" />
+      <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcFraccMovimientoDe_FK01" Association="ApitrazModel.SalaProcFraccMovimientoDe_FK01">
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
+    </AssociationSet>
+    <AssociationSet Name="SalaProcYFraccMovimiento_FK00" Association="ApitrazModel.SalaProcYFraccMovimiento_FK00">
+      <End Role="SalasProcFracc" EntitySet="SalasProcFracc" />
+      <End Role="SalaProcYFraccMovimiento" EntitySet="SalaProcYFraccMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="SalasExtracción_FK02" Association="ApitrazModel.SalasExtracción_FK02">
+      <End Role="TiposSalas" EntitySet="TiposSalas" />
+      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+    </AssociationSet>
+    <AssociationSet Name="ProductosOfrecidosProv" Association="ApitrazModel.ProductosOfrecidosProv">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ProveedoresMatInerte" EntitySet="ProveedoresMatInerte" />
+    </AssociationSet>
+    <AssociationSet Name="RemediosPorProductor" Association="ApitrazModel.RemediosPorProductor">
+      <End Role="Productores" EntitySet="Productores" />
+      <End Role="Remedios" EntitySet="Remedios" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ActProductivas">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodProd" Type="Int32" Nullable="false" />
+    <Property Name="Cant" Type="Int32" />
+    <Property Name="Unidad" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.ActProductivas_FK00" FromRole="ActProductivas" ToRole="Productores" />
+    <NavigationProperty Name="Productos" Relationship="ApitrazModel.ActProductivas_FK01" FromRole="ActProductivas" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Apiarios">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroApiario" Type="Int32" Nullable="false" />
+    <Property Name="Ubicación" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Geoposición" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroColmenas" Type="Int32" />
+    <Property Name="RENSPA" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="CodLoc" Type="Int32" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.Apiarios_FK00" FromRole="Apiarios" ToRole="Loc" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.Apiarios_FK01" FromRole="Apiarios" ToRole="Productores" />
+    <NavigationProperty Name="PlanillaCampo" Relationship="ApitrazModel.PlanillaCampo_FK00" FromRole="Apiarios" ToRole="PlanillaCampo" />
+    <NavigationProperty Name="ProveedoresMatVivo" Relationship="ApitrazModel.ProveedoresMatVivo_FK00" FromRole="Apiarios" ToRole="ProveedoresMatVivo" />
+  </EntityType>
+  <EntityType Name="AsesorTecnico">
+    <Key>
+      <PropertyRef Name="IdTecnico" />
+    </Key>
+    <Property Name="IdTecnico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TecNom" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="TecOrg" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="TecTel" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ControlSanitario" Relationship="ApitrazModel.ControlSanitario_FK00" FromRole="AsesorTecnico" ToRole="ControlSanitario" />
+  </EntityType>
+  <EntityType Name="Compradores">
+    <Key>
+      <PropertyRef Name="CodComprador" />
+    </Key>
+    <Property Name="CodComprador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Apellido" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CompDir" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CompTel" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="FormasComercializacion" Relationship="ApitrazModel.FormasComercializacion_FK00" FromRole="Compradores" ToRole="FormasComercializacion" />
+  </EntityType>
+  <EntityType Name="ControlSanitario">
+    <Key>
+      <PropertyRef Name="IdControl" />
+    </Key>
+    <Property Name="IdControl" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NroRegistroVivo" Type="Int32" />
+    <Property Name="IdTecnico" Type="Int32" />
+    <Property Name="ControSfecha" Type="DateTime" />
+    <Property Name="ControlSobs" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AsesorTecnico" Relationship="ApitrazModel.ControlSanitario_FK00" FromRole="ControlSanitario" ToRole="AsesorTecnico" />
+    <NavigationProperty Name="ProveedoresMatVivo" Relationship="ApitrazModel.ControlSanitario_FK01" FromRole="ControlSanitario" ToRole="ProveedoresMatVivo" />
+  </EntityType>
+  <EntityType Name="Cuencas">
+    <Key>
+      <PropertyRef Name="codcuenca" />
+    </Key>
+    <Property Name="codcuenca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cuenca" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Dptos" Relationship="ApitrazModel.Dptos_FK00" FromRole="Cuencas" ToRole="Dptos" />
+  </EntityType>
+  <EntityType Name="Dptos">
+    <Key>
+      <PropertyRef Name="CodDpto" />
+    </Key>
+    <Property Name="CodDpto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Dpto" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="codcuenca" Type="Int32" />
+    <NavigationProperty Name="Cuencas" Relationship="ApitrazModel.Dptos_FK00" FromRole="Dptos" ToRole="Cuencas" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.Loc_FK00" FromRole="Dptos" ToRole="Loc" />
+  </EntityType>
+  <EntityType Name="Enfermedades">
+    <Key>
+      <PropertyRef Name="CodEnfermedad" />
+    </Key>
+    <Property Name="CodEnfermedad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Enfermedad" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ManejoColmenar" Relationship="ApitrazModel.ManejoColmenar_FK00" FromRole="Enfermedades" ToRole="ManejoColmenar" />
+  </EntityType>
+  <EntityType Name="FormasComercializacion">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodProd" Type="Int32" Nullable="false" />
+    <Property Name="CodComprador" Type="Int32" />
+    <Property Name="CodGrupo" Type="Int32" />
+    <Property Name="Directa" Type="Boolean" />
+    <Property Name="Otras" Type="Boolean" />
+    <Property Name="Comprador" Type="Boolean" />
+    <NavigationProperty Name="Compradores" Relationship="ApitrazModel.FormasComercializacion_FK00" FromRole="FormasComercializacion" ToRole="Compradores" />
+    <NavigationProperty Name="Grupos" Relationship="ApitrazModel.FormasComercializacion_FK01" FromRole="FormasComercializacion" ToRole="Grupos" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.FormasComercializacion_FK02" FromRole="FormasComercializacion" ToRole="Productores" />
+    <NavigationProperty Name="Productos" Relationship="ApitrazModel.FormasComercializacion_FK03" FromRole="FormasComercializacion" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="CodGrupo" />
+    </Key>
+    <Property Name="CodGrupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoGrupo" Type="Int32" />
+    <Property Name="RazonSocial" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CUIT" Type="String" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="Dirección" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Teléfono" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="GCorreoElec" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodLoc" Type="Int32" />
+    <NavigationProperty Name="FormasComercializacion" Relationship="ApitrazModel.FormasComercializacion_FK01" FromRole="Grupos" ToRole="FormasComercializacion" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.Grupos_FK00" FromRole="Grupos" ToRole="Loc" />
+    <NavigationProperty Name="Tipos_de_Grupos" Relationship="ApitrazModel.Grupos_FK01" FromRole="Grupos" ToRole="Tipos_de_Grupos" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.Productores_FK00" FromRole="Grupos" ToRole="Productores" />
+    <NavigationProperty Name="SalasExtracción" Relationship="ApitrazModel.SalasExtracción_FK00" FromRole="Grupos" ToRole="SalasExtracción" />
+  </EntityType>
+  <EntityType Name="Laboratorio">
+    <Key>
+      <PropertyRef Name="CodLab" />
+    </Key>
+    <Property Name="CodLab" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Direccion" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Laboratorio_movimiento">
+    <Key>
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodLab" Type="Int32" />
+    <Property Name="NroSalaExtraccion" Type="Int32" />
+    <Property Name="IdTipoSala" Type="Int32" />
+    <Property Name="ren" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CodTipoAnalisis" Type="Int32" />
+    <Property Name="Fecha_de_Extraccion" Type="DateTime" />
+    <Property Name="Fecha_analisis" Type="DateTime" />
+    <Property Name="Nro_de_muestra" Type="Int32" />
+    <Property Name="Resultado" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="unidad" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Tambor" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Lote" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Loc">
+    <Key>
+      <PropertyRef Name="CodLoc" />
+    </Key>
+    <Property Name="CodLoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Loc1" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodDpto" Type="Int32" />
+    <Property Name="codpos" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Apiarios" Relationship="ApitrazModel.Apiarios_FK00" FromRole="Loc" ToRole="Apiarios" />
+    <NavigationProperty Name="Dptos" Relationship="ApitrazModel.Loc_FK00" FromRole="Loc" ToRole="Dptos" />
+    <NavigationProperty Name="Grupos" Relationship="ApitrazModel.Grupos_FK00" FromRole="Loc" ToRole="Grupos" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.Productores_FK01" FromRole="Loc" ToRole="Productores" />
+    <NavigationProperty Name="SalasExtracción" Relationship="ApitrazModel.SalasExtracción_FK01" FromRole="Loc" ToRole="SalasExtracción" />
+    <NavigationProperty Name="SalasProcFracc" Relationship="ApitrazModel.SalasProcFracc_FK00" FromRole="Loc" ToRole="SalasProcFracc" />
+  </EntityType>
+  <EntityType Name="ManejoColmenar">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="CodEnfermedad" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodEnfermedad" Type="Int32" Nullable="false" />
+    <Property Name="Preven" Type="Boolean" />
+    <Property Name="Cura" Type="Boolean" />
+    <Property Name="Otoño" Type="Boolean" />
+    <Property Name="Primavera" Type="Boolean" />
+    <NavigationProperty Name="Enfermedades" Relationship="ApitrazModel.ManejoColmenar_FK00" FromRole="ManejoColmenar" ToRole="Enfermedades" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.ManejoColmenar_FK01" FromRole="ManejoColmenar" ToRole="Productores" />
+  </EntityType>
+  <EntityType Name="MovSalasExtraccion">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="Int32" Nullable="false" />
+    <Property Name="Año" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoSala" Type="Int32" Nullable="false" />
+    <Property Name="MovSObs" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="SalasExtracción" Relationship="ApitrazModel.MovSalasExtraccion_FK00" FromRole="MovSalasExtraccion" ToRole="SalasExtracción" />
+  </EntityType>
+  <EntityType Name="MovSalasExtraccionDet">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="SENroItem" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="Int32" Nullable="false" />
+    <Property Name="Año" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+    <Property Name="SENroItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoSala" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" />
+    <Property Name="ren" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="MediaAlzas" Type="Int32" />
+    <Property Name="CodProd" Type="Int32" />
+    <Property Name="KiloObtenido" Type="Double" />
+    <Property Name="NumAlzas" Type="Int32" />
+    <Property Name="SEPresentacion" Type="Double" />
+    <Property Name="SECantEnvases" Type="Int32" />
+    <Property Name="SEtotalKgs" Type="Double" />
+    <Property Name="SENroLote" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="SEDocAmparo" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="CodComprador" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PlanillaCampo">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroApiario" Type="Int32" Nullable="false" />
+    <Property Name="AñoInicio" Type="Int32" Nullable="false" />
+    <Property Name="AñoFin" Type="Int32" Nullable="false" />
+    <Property Name="ColmenasInicio" Type="Int32" />
+    <Property Name="ColmenasRevisadas" Type="Int32" />
+    <Property Name="ColmenasDescartadas" Type="Int32" />
+    <Property Name="CCpromedio" Type="Int32" />
+    <Property Name="CMpromedio" Type="Int32" />
+    <Property Name="ColmenasI" Type="Int32" />
+    <Property Name="ColmenasII" Type="Int32" />
+    <Property Name="ColemenasIII" Type="Int32" />
+    <Property Name="LoqueAmer" Type="Int32" />
+    <Property Name="LoqueEur" Type="Int32" />
+    <Property Name="CriaEnsacada" Type="Int32" />
+    <Property Name="CriaYesificada" Type="Int32" />
+    <Property Name="Otras" Type="Int32" />
+    <Property Name="Huerfanas" Type="Int32" />
+    <Property Name="Zangueras" Type="Int32" />
+    <Property Name="Muertas" Type="Int32" />
+    <Property Name="FechaOtonoAnt" Type="DateTime" />
+    <Property Name="ProductoOtonoAnt" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="FechaTratActual" Type="DateTime" />
+    <Property Name="ProductoTratActual" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Apiarios" Relationship="ApitrazModel.PlanillaCampo_FK00" FromRole="PlanillaCampo" ToRole="Apiarios" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.PlanillaCampo_FK01" FromRole="PlanillaCampo" ToRole="Productores" />
+    <NavigationProperty Name="PlanillasMovimientos" Relationship="ApitrazModel.PlanillasMovimientos_FK00" FromRole="PlanillaCampo" ToRole="PlanillasMovimientos" />
+    <NavigationProperty Name="PrevalenciaVarroa" Relationship="ApitrazModel.PrevalenciaVarroa_FK00" FromRole="PlanillaCampo" ToRole="PrevalenciaVarroa" />
+  </EntityType>
+  <EntityType Name="PlanillasMovimientos">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+      <PropertyRef Name="CodItem" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroApiario" Type="Int32" Nullable="false" />
+    <Property Name="AñoInicio" Type="Int32" Nullable="false" />
+    <Property Name="AñoFin" Type="Int32" Nullable="false" />
+    <Property Name="CodItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlFecha" Type="DateTime" />
+    <Property Name="PlNucleo" Type="Int32" />
+    <Property Name="PlColmenas" Type="Int32" />
+    <Property Name="PlTipoAlimento" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="PlCantColmenas" Type="Int32" />
+    <Property Name="CodProd" Type="Int32" />
+    <Property Name="PlDosis" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="PlTipoMultipl" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="PlCantMultipl" Type="Int32" />
+    <Property Name="PlOrigenDest" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="PlMediasAlzas" Type="Int32" />
+    <Property Name="PlReinas" Type="Int32" />
+    <Property Name="PlCantMediaAlza" Type="Int32" />
+    <Property Name="SEKgsNetos" Type="Double" />
+    <Property Name="SEobs" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PlanillaCampo" Relationship="ApitrazModel.PlanillasMovimientos_FK00" FromRole="PlanillasMovimientos" ToRole="PlanillaCampo" />
+    <NavigationProperty Name="Productos" Relationship="ApitrazModel.PlanillasMovimientos_FK01" FromRole="PlanillasMovimientos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="PrevalenciaVarroa">
+    <Key>
+      <PropertyRef Name="ren" />
+      <PropertyRef Name="NroApiario" />
+      <PropertyRef Name="AñoInicio" />
+      <PropertyRef Name="AñoFin" />
+      <PropertyRef Name="ColmenaNum" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroApiario" Type="Int32" Nullable="false" />
+    <Property Name="AñoInicio" Type="Int32" Nullable="false" />
+    <Property Name="AñoFin" Type="Int32" Nullable="false" />
+    <Property Name="ColmenaNum" Type="Int32" Nullable="false" />
+    <Property Name="AbejasDetectAnt" Type="Int32" />
+    <Property Name="AbejasDetecDesp" Type="Int32" />
+    <Property Name="VarroaDetecAnt" Type="Int32" />
+    <Property Name="VarroaDetecDesp" Type="Int32" />
+    <Property Name="PorcetajeAnt" Type="Double" />
+    <Property Name="PorcentajeDesp" Type="Double" />
+    <NavigationProperty Name="PlanillaCampo" Relationship="ApitrazModel.PrevalenciaVarroa_FK00" FromRole="PrevalenciaVarroa" ToRole="PlanillaCampo" />
+  </EntityType>
+  <EntityType Name="Productores">
+    <Key>
+      <PropertyRef Name="ren" />
+    </Key>
+    <Property Name="ren" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="fechains" Type="DateTime" />
+    <Property Name="fechavenc" Type="DateTime" />
+    <Property Name="ape" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="nom" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="dni" Type="Int32" />
+    <Property Name="dom" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="correo" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodLoc" Type="Int32" />
+    <Property Name="TratamientosSanitarios" Type="Boolean" />
+    <Property Name="TipoRemedios" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CodGrupo" Type="Int32" />
+    <Property Name="Cuit" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Carnet" Type="Boolean" />
+    <NavigationProperty Name="ActProductivas" Relationship="ApitrazModel.ActProductivas_FK00" FromRole="Productores" ToRole="ActProductivas" />
+    <NavigationProperty Name="Apiarios" Relationship="ApitrazModel.Apiarios_FK01" FromRole="Productores" ToRole="Apiarios" />
+    <NavigationProperty Name="FormasComercializacion" Relationship="ApitrazModel.FormasComercializacion_FK02" FromRole="Productores" ToRole="FormasComercializacion" />
+    <NavigationProperty Name="Grupos" Relationship="ApitrazModel.Productores_FK00" FromRole="Productores" ToRole="Grupos" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.Productores_FK01" FromRole="Productores" ToRole="Loc" />
+    <NavigationProperty Name="ManejoColmenar" Relationship="ApitrazModel.ManejoColmenar_FK01" FromRole="Productores" ToRole="ManejoColmenar" />
+    <NavigationProperty Name="PlanillaCampo" Relationship="ApitrazModel.PlanillaCampo_FK01" FromRole="Productores" ToRole="PlanillaCampo" />
+    <NavigationProperty Name="ProveedoresMatInerte" Relationship="ApitrazModel.ProveedoresMatInerte_FK00" FromRole="Productores" ToRole="ProveedoresMatInerte" />
+    <NavigationProperty Name="Remedios" Relationship="ApitrazModel.RemediosPorProductor" FromRole="Productores" ToRole="Remedios" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="CodProd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prod" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ActProductivas" Relationship="ApitrazModel.ActProductivas_FK01" FromRole="Productos" ToRole="ActProductivas" />
+    <NavigationProperty Name="FormasComercializacion" Relationship="ApitrazModel.FormasComercializacion_FK03" FromRole="Productos" ToRole="FormasComercializacion" />
+    <NavigationProperty Name="PlanillasMovimientos" Relationship="ApitrazModel.PlanillasMovimientos_FK01" FromRole="Productos" ToRole="PlanillasMovimientos" />
+    <NavigationProperty Name="ProductosProvVivo" Relationship="ApitrazModel.ProductosProvVivo_FK00" FromRole="Productos" ToRole="ProductosProvVivo" />
+    <NavigationProperty Name="ProveedoresMatInerte" Relationship="ApitrazModel.ProductosOfrecidosProv" FromRole="Productos" ToRole="ProveedoresMatInerte" />
+  </EntityType>
+  <EntityType Name="ProductosProvVivo">
+    <Key>
+      <PropertyRef Name="NroRegistroVivo" />
+      <PropertyRef Name="CodProd" />
+    </Key>
+    <Property Name="NroRegistroVivo" Type="Int32" Nullable="false" />
+    <Property Name="CodProd" Type="Int32" Nullable="false" />
+    <Property Name="ProvProtocolo" Type="Boolean" />
+    <NavigationProperty Name="Productos" Relationship="ApitrazModel.ProductosProvVivo_FK00" FromRole="ProductosProvVivo" ToRole="Productos" />
+    <NavigationProperty Name="ProveedoresMatVivo" Relationship="ApitrazModel.ProductosProvVivo_FK01" FromRole="ProductosProvVivo" ToRole="ProveedoresMatVivo" />
+  </EntityType>
+  <EntityType Name="ProveedoresMatInerte">
+    <Key>
+      <PropertyRef Name="NroRegistroInerte" />
+    </Key>
+    <Property Name="NroRegistroInerte" Type="Int32" Nullable="false" />
+    <Property Name="ren" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="ProvApeIn" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="ProvNomIn" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="ProvDomIn" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="ProvDomLeIn" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="ProvTeleIn" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="ProvFaxIn" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ProvObsIn" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Dni" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.ProveedoresMatInerte_FK00" FromRole="ProveedoresMatInerte" ToRole="Productores" />
+    <NavigationProperty Name="Productos" Relationship="ApitrazModel.ProductosOfrecidosProv" FromRole="ProveedoresMatInerte" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="ProveedoresMatVivo">
+    <Key>
+      <PropertyRef Name="NroRegistroVivo" />
+    </Key>
+    <Property Name="NroRegistroVivo" Type="Int32" Nullable="false" />
+    <Property Name="ren" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="NroApiario" Type="Int32" />
+    <Property Name="ProvObsVivo" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Domicilio" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Correo_Eletronico" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Apiarios" Relationship="ApitrazModel.ProveedoresMatVivo_FK00" FromRole="ProveedoresMatVivo" ToRole="Apiarios" />
+    <NavigationProperty Name="ControlSanitario" Relationship="ApitrazModel.ControlSanitario_FK01" FromRole="ProveedoresMatVivo" ToRole="ControlSanitario" />
+    <NavigationProperty Name="ProductosProvVivo" Relationship="ApitrazModel.ProductosProvVivo_FK01" FromRole="ProveedoresMatVivo" ToRole="ProductosProvVivo" />
+  </EntityType>
+  <EntityType Name="Remedios">
+    <Key>
+      <PropertyRef Name="CodRem" />
+    </Key>
+    <Property Name="CodRem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Remedio" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Productores" Relationship="ApitrazModel.RemediosPorProductor" FromRole="Remedios" ToRole="Productores" />
+  </EntityType>
+  <EntityType Name="SalaProcFraccMovimientoDel">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="SPFNroItem" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="Int32" Nullable="false" />
+    <Property Name="Año" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+    <Property Name="SPFNroItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SPFFecha" Type="DateTime" />
+    <Property Name="ProcEnPlanta" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="SPFNroLoteFinal" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="SPFPresentación" Type="Double" />
+    <Property Name="SPFCantEnvases" Type="Int32" />
+    <Property Name="SPFTotalKgs" Type="Double" />
+    <Property Name="SPFDocAmparo" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="NroSalaExtraccion" Type="Int32" />
+    <Property Name="IdTipoSala" Type="Int32" />
+    <NavigationProperty Name="SalaProcYFraccMovimiento" Relationship="ApitrazModel.SalaProcFraccMovimientoDe_FK00" FromRole="SalaProcFraccMovimientoDel" ToRole="SalaProcYFraccMovimiento" />
+    <NavigationProperty Name="SalasExtracción" Relationship="ApitrazModel.SalaProcFraccMovimientoDe_FK01" FromRole="SalaProcFraccMovimientoDel" ToRole="SalasExtracción" />
+  </EntityType>
+  <EntityType Name="SalaProcYFraccMovimiento">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="Mes" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="Int32" Nullable="false" />
+    <Property Name="Año" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SalaProcFraccMovimientoDel" Relationship="ApitrazModel.SalaProcFraccMovimientoDe_FK00" FromRole="SalaProcYFraccMovimiento" ToRole="SalaProcFraccMovimientoDel" />
+    <NavigationProperty Name="SalasProcFracc" Relationship="ApitrazModel.SalaProcYFraccMovimiento_FK00" FromRole="SalaProcYFraccMovimiento" ToRole="SalasProcFracc" />
+  </EntityType>
+  <EntityType Name="SalasExtracción">
+    <Key>
+      <PropertyRef Name="NroSalaExtraccion" />
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="NroSalaExtraccion" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoSala" Type="Int32" Nullable="false" />
+    <Property Name="CodLoc" Type="Int32" />
+    <Property Name="Dueño" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Telfijo" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Telmovil" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="CorreoElec" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="CodGrupo" Type="Int32" />
+    <NavigationProperty Name="Grupos" Relationship="ApitrazModel.SalasExtracción_FK00" FromRole="SalasExtracción" ToRole="Grupos" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.SalasExtracción_FK01" FromRole="SalasExtracción" ToRole="Loc" />
+    <NavigationProperty Name="MovSalasExtraccion" Relationship="ApitrazModel.MovSalasExtraccion_FK00" FromRole="SalasExtracción" ToRole="MovSalasExtraccion" />
+    <NavigationProperty Name="SalaProcFraccMovimientoDel" Relationship="ApitrazModel.SalaProcFraccMovimientoDe_FK01" FromRole="SalasExtracción" ToRole="SalaProcFraccMovimientoDel" />
+    <NavigationProperty Name="TiposSalas" Relationship="ApitrazModel.SalasExtracción_FK02" FromRole="SalasExtracción" ToRole="TiposSalas" />
+  </EntityType>
+  <EntityType Name="SalasProcFracc">
+    <Key>
+      <PropertyRef Name="NroEstablecimiento" />
+    </Key>
+    <Property Name="NroEstablecimiento" Type="Int32" Nullable="false" />
+    <Property Name="CodLoc" Type="Int32" />
+    <NavigationProperty Name="Loc" Relationship="ApitrazModel.SalasProcFracc_FK00" FromRole="SalasProcFracc" ToRole="Loc" />
+    <NavigationProperty Name="SalaProcYFraccMovimiento" Relationship="ApitrazModel.SalaProcYFraccMovimiento_FK00" FromRole="SalasProcFracc" ToRole="SalaProcYFraccMovimiento" />
+  </EntityType>
+  <EntityType Name="Tipos_de_analisis">
+    <Key>
+      <PropertyRef Name="CodTipoAnalisis" />
+    </Key>
+    <Property Name="CodTipoAnalisis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Rango_de_valores" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Unidad" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tipos_de_Grupos">
+    <Key>
+      <PropertyRef Name="IdTipoGrupo" />
+    </Key>
+    <Property Name="IdTipoGrupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoGrupo" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Grupos" Relationship="ApitrazModel.Grupos_FK01" FromRole="Tipos_de_Grupos" ToRole="Grupos" />
+  </EntityType>
+  <EntityType Name="TiposSalas">
+    <Key>
+      <PropertyRef Name="IdTipoSala" />
+    </Key>
+    <Property Name="IdTipoSala" Type="Int32" Nullable="false" />
+    <Property Name="tipoSala" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="SalasExtracción" Relationship="ApitrazModel.SalasExtracción_FK02" FromRole="TiposSalas" ToRole="SalasExtracción" />
+  </EntityType>
+  <Association Name="ActProductivas_FK00">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="1" />
+    <End Role="ActProductivas" Type="ApitrazModel.ActProductivas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ActProductivas">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActProductivas_FK01">
+    <End Role="Productos" Type="ApitrazModel.Productos" Multiplicity="1" />
+    <End Role="ActProductivas" Type="ApitrazModel.ActProductivas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="ActProductivas">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Apiarios_FK00">
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="0..1" />
+    <End Role="Apiarios" Type="ApitrazModel.Apiarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Apiarios">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Apiarios_FK01">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="1" />
+    <End Role="Apiarios" Type="ApitrazModel.Apiarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="Apiarios">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillaCampo_FK00">
+    <End Role="Apiarios" Type="ApitrazModel.Apiarios" Multiplicity="1" />
+    <End Role="PlanillaCampo" Type="ApitrazModel.PlanillaCampo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apiarios">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Principal>
+      <Dependent Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProveedoresMatVivo_FK00">
+    <End Role="Apiarios" Type="ApitrazModel.Apiarios" Multiplicity="0..1" />
+    <End Role="ProveedoresMatVivo" Type="ApitrazModel.ProveedoresMatVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apiarios">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Principal>
+      <Dependent Role="ProveedoresMatVivo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ControlSanitario_FK00">
+    <End Role="AsesorTecnico" Type="ApitrazModel.AsesorTecnico" Multiplicity="0..1" />
+    <End Role="ControlSanitario" Type="ApitrazModel.ControlSanitario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsesorTecnico">
+        <PropertyRef Name="IdTecnico" />
+      </Principal>
+      <Dependent Role="ControlSanitario">
+        <PropertyRef Name="IdTecnico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK00">
+    <End Role="Compradores" Type="ApitrazModel.Compradores" Multiplicity="0..1" />
+    <End Role="FormasComercializacion" Type="ApitrazModel.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compradores">
+        <PropertyRef Name="CodComprador" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodComprador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ControlSanitario_FK01">
+    <End Role="ProveedoresMatVivo" Type="ApitrazModel.ProveedoresMatVivo" Multiplicity="0..1" />
+    <End Role="ControlSanitario" Type="ApitrazModel.ControlSanitario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresMatVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Principal>
+      <Dependent Role="ControlSanitario">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Dptos_FK00">
+    <End Role="Cuencas" Type="ApitrazModel.Cuencas" Multiplicity="0..1" />
+    <End Role="Dptos" Type="ApitrazModel.Dptos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuencas">
+        <PropertyRef Name="codcuenca" />
+      </Principal>
+      <Dependent Role="Dptos">
+        <PropertyRef Name="codcuenca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Loc_FK00">
+    <End Role="Dptos" Type="ApitrazModel.Dptos" Multiplicity="0..1" />
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dptos">
+        <PropertyRef Name="CodDpto" />
+      </Principal>
+      <Dependent Role="Loc">
+        <PropertyRef Name="CodDpto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ManejoColmenar_FK00">
+    <End Role="Enfermedades" Type="ApitrazModel.Enfermedades" Multiplicity="1" />
+    <End Role="ManejoColmenar" Type="ApitrazModel.ManejoColmenar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enfermedades">
+        <PropertyRef Name="CodEnfermedad" />
+      </Principal>
+      <Dependent Role="ManejoColmenar">
+        <PropertyRef Name="CodEnfermedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK01">
+    <End Role="Grupos" Type="ApitrazModel.Grupos" Multiplicity="0..1" />
+    <End Role="FormasComercializacion" Type="ApitrazModel.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK02">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="1" />
+    <End Role="FormasComercializacion" Type="ApitrazModel.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormasComercializacion_FK03">
+    <End Role="Productos" Type="ApitrazModel.Productos" Multiplicity="1" />
+    <End Role="FormasComercializacion" Type="ApitrazModel.FormasComercializacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="FormasComercializacion">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Grupos_FK00">
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="0..1" />
+    <End Role="Grupos" Type="ApitrazModel.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Grupos_FK01">
+    <End Role="Tipos_de_Grupos" Type="ApitrazModel.Tipos_de_Grupos" Multiplicity="0..1" />
+    <End Role="Grupos" Type="ApitrazModel.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipos_de_Grupos">
+        <PropertyRef Name="IdTipoGrupo" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="IdTipoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Productores_FK00">
+    <End Role="Grupos" Type="ApitrazModel.Grupos" Multiplicity="0..1" />
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="Productores">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK00">
+    <End Role="Grupos" Type="ApitrazModel.Grupos" Multiplicity="0..1" />
+    <End Role="SalasExtracción" Type="ApitrazModel.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="CodGrupo" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="CodGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Productores_FK01">
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="0..1" />
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="Productores">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK01">
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="0..1" />
+    <End Role="SalasExtracción" Type="ApitrazModel.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasProcFracc_FK00">
+    <End Role="Loc" Type="ApitrazModel.Loc" Multiplicity="0..1" />
+    <End Role="SalasProcFracc" Type="ApitrazModel.SalasProcFracc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loc">
+        <PropertyRef Name="CodLoc" />
+      </Principal>
+      <Dependent Role="SalasProcFracc">
+        <PropertyRef Name="CodLoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ManejoColmenar_FK01">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="1" />
+    <End Role="ManejoColmenar" Type="ApitrazModel.ManejoColmenar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ManejoColmenar">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MovSalasExtraccion_FK00">
+    <End Role="SalasExtracción" Type="ApitrazModel.SalasExtracción" Multiplicity="1" />
+    <End Role="MovSalasExtraccion" Type="ApitrazModel.MovSalasExtraccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasExtracción">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="MovSalasExtraccion">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillaCampo_FK01">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="1" />
+    <End Role="PlanillaCampo" Type="ApitrazModel.PlanillaCampo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillasMovimientos_FK00">
+    <End Role="PlanillaCampo" Type="ApitrazModel.PlanillaCampo" Multiplicity="1" />
+    <End Role="PlanillasMovimientos" Type="ApitrazModel.PlanillasMovimientos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Principal>
+      <Dependent Role="PlanillasMovimientos">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PrevalenciaVarroa_FK00">
+    <End Role="PlanillaCampo" Type="ApitrazModel.PlanillaCampo" Multiplicity="1" />
+    <End Role="PrevalenciaVarroa" Type="ApitrazModel.PrevalenciaVarroa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCampo">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Principal>
+      <Dependent Role="PrevalenciaVarroa">
+        <PropertyRef Name="ren" />
+        <PropertyRef Name="NroApiario" />
+        <PropertyRef Name="AñoInicio" />
+        <PropertyRef Name="AñoFin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlanillasMovimientos_FK01">
+    <End Role="Productos" Type="ApitrazModel.Productos" Multiplicity="0..1" />
+    <End Role="PlanillasMovimientos" Type="ApitrazModel.PlanillasMovimientos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="PlanillasMovimientos">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProveedoresMatInerte_FK00">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="0..1" />
+    <End Role="ProveedoresMatInerte" Type="ApitrazModel.ProveedoresMatInerte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productores">
+        <PropertyRef Name="ren" />
+      </Principal>
+      <Dependent Role="ProveedoresMatInerte">
+        <PropertyRef Name="ren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosProvVivo_FK00">
+    <End Role="Productos" Type="ApitrazModel.Productos" Multiplicity="1" />
+    <End Role="ProductosProvVivo" Type="ApitrazModel.ProductosProvVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodProd" />
+      </Principal>
+      <Dependent Role="ProductosProvVivo">
+        <PropertyRef Name="CodProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosProvVivo_FK01">
+    <End Role="ProveedoresMatVivo" Type="ApitrazModel.ProveedoresMatVivo" Multiplicity="1" />
+    <End Role="ProductosProvVivo" Type="ApitrazModel.ProductosProvVivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresMatVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Principal>
+      <Dependent Role="ProductosProvVivo">
+        <PropertyRef Name="NroRegistroVivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcFraccMovimientoDe_FK00">
+    <End Role="SalaProcYFraccMovimiento" Type="ApitrazModel.SalaProcYFraccMovimiento" Multiplicity="1" />
+    <End Role="SalaProcFraccMovimientoDel" Type="ApitrazModel.SalaProcFraccMovimientoDel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalaProcYFraccMovimiento">
+        <PropertyRef Name="NroEstablecimiento" />
+        <PropertyRef Name="Año" />
+        <PropertyRef Name="Mes" />
+      </Principal>
+      <Dependent Role="SalaProcFraccMovimientoDel">
+        <PropertyRef Name="NroEstablecimiento" />
+        <PropertyRef Name="Año" />
+        <PropertyRef Name="Mes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcFraccMovimientoDe_FK01">
+    <End Role="SalasExtracción" Type="ApitrazModel.SalasExtracción" Multiplicity="0..1" />
+    <End Role="SalaProcFraccMovimientoDel" Type="ApitrazModel.SalaProcFraccMovimientoDel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasExtracción">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="SalaProcFraccMovimientoDel">
+        <PropertyRef Name="NroSalaExtraccion" />
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalaProcYFraccMovimiento_FK00">
+    <End Role="SalasProcFracc" Type="ApitrazModel.SalasProcFracc" Multiplicity="1" />
+    <End Role="SalaProcYFraccMovimiento" Type="ApitrazModel.SalaProcYFraccMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalasProcFracc">
+        <PropertyRef Name="NroEstablecimiento" />
+      </Principal>
+      <Dependent Role="SalaProcYFraccMovimiento">
+        <PropertyRef Name="NroEstablecimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalasExtracción_FK02">
+    <End Role="TiposSalas" Type="ApitrazModel.TiposSalas" Multiplicity="1" />
+    <End Role="SalasExtracción" Type="ApitrazModel.SalasExtracción" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposSalas">
+        <PropertyRef Name="IdTipoSala" />
+      </Principal>
+      <Dependent Role="SalasExtracción">
+        <PropertyRef Name="IdTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductosOfrecidosProv">
+    <End Role="Productos" Type="ApitrazModel.Productos" Multiplicity="*" />
+    <End Role="ProveedoresMatInerte" Type="ApitrazModel.ProveedoresMatInerte" Multiplicity="*" />
+  </Association>
+  <Association Name="RemediosPorProductor">
+    <End Role="Productores" Type="ApitrazModel.Productores" Multiplicity="*" />
+    <End Role="Remedios" Type="ApitrazModel.Remedios" Multiplicity="*" />
+  </Association>
+</Schema>
