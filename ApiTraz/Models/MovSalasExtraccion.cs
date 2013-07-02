@@ -18,7 +18,7 @@ using System.Runtime.Serialization;
 namespace ApiTraz.Models
 {
     [DataContract(IsReference = true)]
-    [KnownType(typeof(SalasExtracción))]
+    [KnownType(typeof(SalasExtraccion))]
     public partial class MovSalasExtraccion: IObjectWithChangeTracker, INotifyPropertyChanged
     {
         #region Propiedades primitivas
@@ -132,7 +132,7 @@ namespace ApiTraz.Models
         #region Propiedades de navegación
     
         [DataMember]
-        public SalasExtracción SalasExtracción
+        public SalasExtraccion SalasExtracción
         {
             get { return _salasExtracción; }
             set
@@ -155,7 +155,7 @@ namespace ApiTraz.Models
                 }
             }
         }
-        private SalasExtracción _salasExtracción;
+        private SalasExtraccion _salasExtracción;
 
         #endregion
         #region ChangeTracking
@@ -251,7 +251,7 @@ namespace ApiTraz.Models
         #endregion
         #region Corrección de asociación
     
-        private void FixupSalasExtracción(SalasExtracción previousValue)
+        private void FixupSalasExtracción(SalasExtraccion previousValue)
         {
             if (IsDeserializing)
             {

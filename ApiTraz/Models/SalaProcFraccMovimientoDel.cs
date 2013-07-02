@@ -19,7 +19,7 @@ namespace ApiTraz.Models
 {
     [DataContract(IsReference = true)]
     [KnownType(typeof(SalaProcYFraccMovimiento))]
-    [KnownType(typeof(SalasExtracción))]
+    [KnownType(typeof(SalasExtraccion))]
     public partial class SalaProcFraccMovimientoDel: IObjectWithChangeTracker, INotifyPropertyChanged
     {
         #region Propiedades primitivas
@@ -308,7 +308,7 @@ namespace ApiTraz.Models
         private SalaProcYFraccMovimiento _salaProcYFraccMovimiento;
     
         [DataMember]
-        public SalasExtracción SalasExtracción
+        public SalasExtraccion SalasExtracción
         {
             get { return _salasExtracción; }
             set
@@ -322,7 +322,7 @@ namespace ApiTraz.Models
                 }
             }
         }
-        private SalasExtracción _salasExtracción;
+        private SalasExtraccion _salasExtracción;
 
         #endregion
         #region ChangeTracking
@@ -460,7 +460,7 @@ namespace ApiTraz.Models
             }
         }
     
-        private void FixupSalasExtracción(SalasExtracción previousValue, bool skipKeys = false)
+        private void FixupSalasExtracción(SalasExtraccion previousValue, bool skipKeys = false)
         {
             if (IsDeserializing)
             {

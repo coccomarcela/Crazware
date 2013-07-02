@@ -17,31 +17,31 @@ namespace ApiTraz.Controllers.Api
         private ApitrazEntities db = new ApitrazEntities();
 
         // GET api/Salas
-        public IEnumerable<SalasExtracción> GetSalasExtracción()
+        public IEnumerable<SalasExtraccion> GetSalasExtracción()
         {
-            var salasextracción = db.SalasExtracción.Include("Grupos").Include("Loc").Include("TiposSalas");
-            return salasextracción.AsEnumerable();
+            var SalasExtraccion = db.SalasExtraccion.Include("Grupos").Include("Loc").Include("TiposSalas");
+            return SalasExtraccion.AsEnumerable();
         }
 
         // GET api/Salas/5
-        public SalasExtracción GetSalasExtracción(int id)
+        public SalasExtraccion GetSalasExtracción(int id)
         {
-            SalasExtracción salasextracción = db.SalasExtracción.Single(s => s.NroSalaExtraccion == id);
-            if (salasextracción == null)
+            SalasExtraccion SalasExtraccion = db.SalasExtraccion.Single(s => s.NroSalaExtraccion == id);
+            if (SalasExtraccion == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return salasextracción;
+            return SalasExtraccion;
         }
 
         // PUT api/Salas/5
-        public HttpResponseMessage PutSalasExtracción(int id, SalasExtracción salasextracción)
+        public HttpResponseMessage PutSalasExtracción(int id, SalasExtraccion SalasExtraccion)
         {
-            if (ModelState.IsValid && id == salasextracción.NroSalaExtraccion)
+            if (ModelState.IsValid && id == SalasExtraccion.NroSalaExtraccion)
             {
-                db.SalasExtracción.Attach(salasextracción);
-                db.ObjectStateManager.ChangeObjectState(salasextracción, EntityState.Modified);
+                db.SalasExtraccion.Attach(SalasExtraccion);
+                db.ObjectStateManager.ChangeObjectState(SalasExtraccion, EntityState.Modified);
 
                 try
                 {
@@ -61,15 +61,15 @@ namespace ApiTraz.Controllers.Api
         }
 
         // POST api/Salas
-        public HttpResponseMessage PostSalasExtracción(SalasExtracción salasextracción)
+        public HttpResponseMessage PostSalasExtracción(SalasExtraccion SalasExtraccion)
         {
             if (ModelState.IsValid)
             {
-                db.SalasExtracción.AddObject(salasextracción);
+                db.SalasExtraccion.AddObject(SalasExtraccion);
                 db.SaveChanges();
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, salasextracción);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = salasextracción.NroSalaExtraccion }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, SalasExtraccion);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = SalasExtraccion.NroSalaExtraccion }));
                 return response;
             }
             else
@@ -81,13 +81,13 @@ namespace ApiTraz.Controllers.Api
         // DELETE api/Salas/5
         public HttpResponseMessage DeleteSalasExtracción(int id)
         {
-            SalasExtracción salasextracción = db.SalasExtracción.Single(s => s.NroSalaExtraccion == id);
-            if (salasextracción == null)
+            SalasExtraccion SalasExtraccion = db.SalasExtraccion.Single(s => s.NroSalaExtraccion == id);
+            if (SalasExtraccion == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.SalasExtracción.DeleteObject(salasextracción);
+            db.SalasExtraccion.DeleteObject(SalasExtraccion);
 
             try
             {
@@ -98,7 +98,7 @@ namespace ApiTraz.Controllers.Api
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, salasextracción);
+            return Request.CreateResponse(HttpStatusCode.OK, SalasExtraccion);
         }
 
         protected override void Dispose(bool disposing)

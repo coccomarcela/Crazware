@@ -290,7 +290,7 @@
     <Compile Include="Models\SalaProcYFraccMovimiento.cs">
       <DependentUpon>ApitrazModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SalasExtracción.cs">
+    <Compile Include="Models\SalasExtraccion.cs">
       <DependentUpon>ApitrazModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SalasProcFracc.cs">

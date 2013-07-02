@@ -239,11 +239,11 @@ namespace ApiTraz.Models
         }
         private ObjectSet<SalaProcYFraccMovimiento> _salaProcYFraccMovimiento;
     
-        public ObjectSet<SalasExtracción> SalasExtracción
+        public ObjectSet<SalasExtraccion> SalasExtraccion
         {
-            get { return _salasExtracción  ?? (_salasExtracción = CreateObjectSet<SalasExtracción>("SalasExtracción")); }
+            get { return _salasExtraccion  ?? (_salasExtraccion = CreateObjectSet<SalasExtraccion>("SalasExtraccion")); }
         }
-        private ObjectSet<SalasExtracción> _salasExtracción;
+        private ObjectSet<SalasExtraccion> _salasExtraccion;
     
         public ObjectSet<SalasProcFracc> SalasProcFracc
         {

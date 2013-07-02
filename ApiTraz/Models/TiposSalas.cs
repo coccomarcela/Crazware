@@ -18,7 +18,7 @@ using System.Runtime.Serialization;
 namespace ApiTraz.Models
 {
     [DataContract(IsReference = true)]
-    [KnownType(typeof(SalasExtracción))]
+    [KnownType(typeof(SalasExtraccion))]
     public partial class TiposSalas: IObjectWithChangeTracker, INotifyPropertyChanged
     {
         #region Propiedades primitivas
@@ -61,13 +61,13 @@ namespace ApiTraz.Models
         #region Propiedades de navegación
     
         [DataMember]
-        public TrackableCollection<SalasExtracción> SalasExtracción
+        public TrackableCollection<SalasExtraccion> SalasExtracción
         {
             get
             {
                 if (_salasExtracción == null)
                 {
-                    _salasExtracción = new TrackableCollection<SalasExtracción>();
+                    _salasExtracción = new TrackableCollection<SalasExtraccion>();
                     _salasExtracción.CollectionChanged += FixupSalasExtracción;
                 }
                 return _salasExtracción;
@@ -85,7 +85,7 @@ namespace ApiTraz.Models
                         _salasExtracción.CollectionChanged -= FixupSalasExtracción;
                         // Este es el extremo principal en una asociación que realiza eliminaciones en cascada.
                         // Quitar el controlador de eventos de eliminación en cascada para aquellas entidades de la colección actual.
-                        foreach (SalasExtracción item in _salasExtracción)
+                        foreach (SalasExtraccion item in _salasExtracción)
                         {
                             ChangeTracker.ObjectStateChanging -= item.HandleCascadeDelete;
                         }
@@ -96,7 +96,7 @@ namespace ApiTraz.Models
                         _salasExtracción.CollectionChanged += FixupSalasExtracción;
                         // Este es el extremo principal en una asociación que realiza eliminaciones en cascada.
                         // Agrega el controlador de eventos de eliminación en cascada para aquellas entidades que ya se encuentran en la nueva colección.
-                        foreach (SalasExtracción item in _salasExtracción)
+                        foreach (SalasExtraccion item in _salasExtracción)
                         {
                             ChangeTracker.ObjectStateChanging += item.HandleCascadeDelete;
                         }
@@ -105,7 +105,7 @@ namespace ApiTraz.Models
                 }
             }
         }
-        private TrackableCollection<SalasExtracción> _salasExtracción;
+        private TrackableCollection<SalasExtraccion> _salasExtracción;
 
         #endregion
         #region ChangeTracking
@@ -200,7 +200,7 @@ namespace ApiTraz.Models
     
             if (e.NewItems != null)
             {
-                foreach (SalasExtracción item in e.NewItems)
+                foreach (SalasExtraccion item in e.NewItems)
                 {
                     item.TiposSalas = this;
                     if (ChangeTracker.ChangeTrackingEnabled)
@@ -219,7 +219,7 @@ namespace ApiTraz.Models
     
             if (e.OldItems != null)
             {
-                foreach (SalasExtracción item in e.OldItems)
+                foreach (SalasExtraccion item in e.OldItems)
                 {
                     if (ReferenceEquals(item.TiposSalas, this))
                     {

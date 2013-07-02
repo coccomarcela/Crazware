@@ -17,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace ApiTraz.Models
 {
-    [DataContract(IsReference = false)]
+    [DataContract(IsReference = true)]
     [KnownType(typeof(ActProductivas))]
     [KnownType(typeof(Apiarios))]
     [KnownType(typeof(FormasComercializacion))]
@@ -342,7 +342,7 @@ namespace ApiTraz.Models
         private TrackableCollection<ActProductivas> _actProductivas;
     
         [DataMember]
-        internal TrackableCollection<Apiarios> Apiarios
+        public TrackableCollection<Apiarios> Apiarios
         {
             get
             {
@@ -389,7 +389,7 @@ namespace ApiTraz.Models
         private TrackableCollection<Apiarios> _apiarios;
     
         [DataMember]
-        internal TrackableCollection<FormasComercializacion> FormasComercializacion
+        public TrackableCollection<FormasComercializacion> FormasComercializacion
         {
             get
             {
@@ -470,7 +470,7 @@ namespace ApiTraz.Models
         private Loc _loc;
     
         [DataMember]
-        internal TrackableCollection<ManejoColmenar> ManejoColmenar
+        public TrackableCollection<ManejoColmenar> ManejoColmenar
         {
             get
             {
@@ -517,7 +517,7 @@ namespace ApiTraz.Models
         private TrackableCollection<ManejoColmenar> _manejoColmenar;
     
         [DataMember]
-        internal TrackableCollection<PlanillaCampo> PlanillaCampo
+        public TrackableCollection<PlanillaCampo> PlanillaCampo
         {
             get
             {
@@ -564,7 +564,7 @@ namespace ApiTraz.Models
         private TrackableCollection<PlanillaCampo> _planillaCampo;
     
         [DataMember]
-        internal TrackableCollection<ProveedoresMatInerte> ProveedoresMatInerte
+        public TrackableCollection<ProveedoresMatInerte> ProveedoresMatInerte
         {
             get
             {
@@ -599,7 +599,7 @@ namespace ApiTraz.Models
         private TrackableCollection<ProveedoresMatInerte> _proveedoresMatInerte;
     
         [DataMember]
-        internal TrackableCollection<Remedios> Remedios
+        public TrackableCollection<Remedios> Remedios
         {
             get
             {

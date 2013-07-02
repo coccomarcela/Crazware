@@ -22,7 +22,7 @@ namespace ApiTraz.Models
     [KnownType(typeof(Loc))]
     [KnownType(typeof(Tipos_de_Grupos))]
     [KnownType(typeof(Productores))]
-    [KnownType(typeof(SalasExtracción))]
+    [KnownType(typeof(SalasExtraccion))]
     public partial class Grupos: IObjectWithChangeTracker, INotifyPropertyChanged
     {
         #region Propiedades primitivas
@@ -275,13 +275,13 @@ namespace ApiTraz.Models
         private TrackableCollection<Productores> _productores;
     
         [DataMember]
-        public TrackableCollection<SalasExtracción> SalasExtracción
+        public TrackableCollection<SalasExtraccion> SalasExtracción
         {
             get
             {
                 if (_salasExtracción == null)
                 {
-                    _salasExtracción = new TrackableCollection<SalasExtracción>();
+                    _salasExtracción = new TrackableCollection<SalasExtraccion>();
                     _salasExtracción.CollectionChanged += FixupSalasExtracción;
                 }
                 return _salasExtracción;
@@ -307,7 +307,7 @@ namespace ApiTraz.Models
                 }
             }
         }
-        private TrackableCollection<SalasExtracción> _salasExtracción;
+        private TrackableCollection<SalasExtraccion> _salasExtracción;
 
         #endregion
         #region ChangeTracking
@@ -572,7 +572,7 @@ namespace ApiTraz.Models
     
             if (e.NewItems != null)
             {
-                foreach (SalasExtracción item in e.NewItems)
+                foreach (SalasExtraccion item in e.NewItems)
                 {
                     item.Grupos = this;
                     if (ChangeTracker.ChangeTrackingEnabled)
@@ -588,7 +588,7 @@ namespace ApiTraz.Models
     
             if (e.OldItems != null)
             {
-                foreach (SalasExtracción item in e.OldItems)
+                foreach (SalasExtraccion item in e.OldItems)
                 {
                     if (ReferenceEquals(item.Grupos, this))
                     {

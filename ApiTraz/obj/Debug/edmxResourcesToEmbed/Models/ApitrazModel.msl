@@ -374,9 +374,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SalasExtracción">
-      <EntityTypeMapping TypeName="ApitrazModel.SalasExtracción">
-        <MappingFragment StoreEntitySet="SalasExtracción">
+    <EntitySetMapping Name="SalasExtraccion">
+      <EntityTypeMapping TypeName="ApitrazModel.SalasExtraccion">
+        <MappingFragment StoreEntitySet="SalasExtraccion">
           <ScalarProperty Name="NroSalaExtraccion" ColumnName="NroSalaExtraccion" />
           <ScalarProperty Name="IdTipoSala" ColumnName="IdTipoSala" />
           <ScalarProperty Name="CodLoc" ColumnName="CodLoc" />

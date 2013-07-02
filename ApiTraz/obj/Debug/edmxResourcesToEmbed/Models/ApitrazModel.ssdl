@@ -50,7 +50,7 @@
     <EntitySet Name="RemediosPorProductor" EntityType="ApitrazModel.Store.RemediosPorProductor" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SalaProcFraccMovimientoDel" EntityType="ApitrazModel.Store.SalaProcFraccMovimientoDel" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SalaProcYFraccMovimiento" EntityType="ApitrazModel.Store.SalaProcYFraccMovimiento" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="SalasExtracción" EntityType="ApitrazModel.Store.SalasExtracción" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalasExtraccion" EntityType="ApitrazModel.Store.SalasExtraccion" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SalasProcFracc" EntityType="ApitrazModel.Store.SalasProcFracc" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tipos de analisis" EntityType="ApitrazModel.Store.Tipos de analisis" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tipos de Grupos" EntityType="ApitrazModel.Store.Tipos de Grupos" store:Type="Tables" Schema="dbo" />
@@ -120,7 +120,7 @@
       <End Role="ManejoColmenar" EntitySet="ManejoColmenar" />
     </AssociationSet>
     <AssociationSet Name="MovSalasExtraccion_FK00" Association="ApitrazModel.Store.MovSalasExtraccion_FK00">
-      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalasExtraccion" EntitySet="SalasExtraccion" />
       <End Role="MovSalasExtraccion" EntitySet="MovSalasExtraccion" />
     </AssociationSet>
     <AssociationSet Name="PlanillaCampo_FK00" Association="ApitrazModel.Store.PlanillaCampo_FK00">
@@ -188,7 +188,7 @@
       <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
     </AssociationSet>
     <AssociationSet Name="SalaProcFraccMovimientoDe_FK01" Association="ApitrazModel.Store.SalaProcFraccMovimientoDe_FK01">
-      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalasExtraccion" EntitySet="SalasExtraccion" />
       <End Role="SalaProcFraccMovimientoDel" EntitySet="SalaProcFraccMovimientoDel" />
     </AssociationSet>
     <AssociationSet Name="SalaProcYFraccMovimiento_FK00" Association="ApitrazModel.Store.SalaProcYFraccMovimiento_FK00">
@@ -197,15 +197,15 @@
     </AssociationSet>
     <AssociationSet Name="SalasExtracción_FK00" Association="ApitrazModel.Store.SalasExtracción_FK00">
       <End Role="Grupos" EntitySet="Grupos" />
-      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalasExtraccion" EntitySet="SalasExtraccion" />
     </AssociationSet>
     <AssociationSet Name="SalasExtracción_FK01" Association="ApitrazModel.Store.SalasExtracción_FK01">
       <End Role="Loc" EntitySet="Loc" />
-      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalasExtraccion" EntitySet="SalasExtraccion" />
     </AssociationSet>
     <AssociationSet Name="SalasExtracción_FK02" Association="ApitrazModel.Store.SalasExtracción_FK02">
       <End Role="TiposSalas" EntitySet="TiposSalas" />
-      <End Role="SalasExtracción" EntitySet="SalasExtracción" />
+      <End Role="SalasExtraccion" EntitySet="SalasExtraccion" />
     </AssociationSet>
     <AssociationSet Name="SalasProcFracc_FK00" Association="ApitrazModel.Store.SalasProcFracc_FK00">
       <End Role="Loc" EntitySet="Loc" />
@@ -605,7 +605,7 @@
     <Property Name="Año" Type="int" Nullable="false" />
     <Property Name="Mes" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="SalasExtracción">
+  <EntityType Name="SalasExtraccion">
     <Key>
       <PropertyRef Name="NroSalaExtraccion" />
       <PropertyRef Name="IdTipoSala" />
@@ -842,10 +842,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="MovSalasExtraccion_FK00">
-    <End Role="SalasExtracción" Type="ApitrazModel.Store.SalasExtracción" Multiplicity="1" />
+    <End Role="SalasExtraccion" Type="ApitrazModel.Store.SalasExtraccion" Multiplicity="1" />
     <End Role="MovSalasExtraccion" Type="ApitrazModel.Store.MovSalasExtraccion" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="SalasExtracción">
+      <Principal Role="SalasExtraccion">
         <PropertyRef Name="NroSalaExtraccion" />
         <PropertyRef Name="IdTipoSala" />
       </Principal>
@@ -1068,10 +1068,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="SalaProcFraccMovimientoDe_FK01">
-    <End Role="SalasExtracción" Type="ApitrazModel.Store.SalasExtracción" Multiplicity="0..1" />
+    <End Role="SalasExtraccion" Type="ApitrazModel.Store.SalasExtraccion" Multiplicity="0..1" />
     <End Role="SalaProcFraccMovimientoDel" Type="ApitrazModel.Store.SalaProcFraccMovimientoDel" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="SalasExtracción">
+      <Principal Role="SalasExtraccion">
         <PropertyRef Name="NroSalaExtraccion" />
         <PropertyRef Name="IdTipoSala" />
       </Principal>
@@ -1095,36 +1095,36 @@
   </Association>
   <Association Name="SalasExtracción_FK00">
     <End Role="Grupos" Type="ApitrazModel.Store.Grupos" Multiplicity="0..1" />
-    <End Role="SalasExtracción" Type="ApitrazModel.Store.SalasExtracción" Multiplicity="*" />
+    <End Role="SalasExtraccion" Type="ApitrazModel.Store.SalasExtraccion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Grupos">
         <PropertyRef Name="CodGrupo" />
       </Principal>
-      <Dependent Role="SalasExtracción">
+      <Dependent Role="SalasExtraccion">
         <PropertyRef Name="CodGrupo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="SalasExtracción_FK01">
     <End Role="Loc" Type="ApitrazModel.Store.Loc" Multiplicity="0..1" />
-    <End Role="SalasExtracción" Type="ApitrazModel.Store.SalasExtracción" Multiplicity="*" />
+    <End Role="SalasExtraccion" Type="ApitrazModel.Store.SalasExtraccion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Loc">
         <PropertyRef Name="CodLoc" />
       </Principal>
-      <Dependent Role="SalasExtracción">
+      <Dependent Role="SalasExtraccion">
         <PropertyRef Name="CodLoc" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="SalasExtracción_FK02">
     <End Role="TiposSalas" Type="ApitrazModel.Store.TiposSalas" Multiplicity="1" />
-    <End Role="SalasExtracción" Type="ApitrazModel.Store.SalasExtracción" Multiplicity="*" />
+    <End Role="SalasExtraccion" Type="ApitrazModel.Store.SalasExtraccion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TiposSalas">
         <PropertyRef Name="IdTipoSala" />
       </Principal>
-      <Dependent Role="SalasExtracción">
+      <Dependent Role="SalasExtraccion">
         <PropertyRef Name="IdTipoSala" />
       </Dependent>
     </ReferentialConstraint>
