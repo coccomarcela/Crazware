@@ -22,9 +22,9 @@ namespace ApiTraz.Controllers
         // GET api/ApiProductores
         
         [Queryable(AllowedQueryOptions = AllowedQueryOptions.All)]
-        public IQueryable<Productores> Get(ODataQueryOptions queryOptions)
+        public IQueryable<Productores> GetProductoresList(ODataQueryOptions queryOptions)
         {
-
+         
             // Apply the query
             return queryOptions.ApplyTo(db.Productores.AsQueryable()) as IQueryable<Productores>;
           

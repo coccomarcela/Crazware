@@ -2649,7 +2649,7 @@
         <EntityTypeShape EntityType="ApitrazModel.Remedios" Width="1.5" PointX="18" PointY="32.375" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="ApitrazModel.SalaProcFraccMovimientoDel" Width="1.5" PointX="21" PointY="31.625" Height="3.9033007812500102" IsExpanded="true" />
         <EntityTypeShape EntityType="ApitrazModel.SalaProcYFraccMovimiento" Width="1.5" PointX="9.75" PointY="31.625" Height="1.9802864583333388" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApitrazModel.SalasExtraccion" Width="1.5" PointX="17.75" PointY="27.5" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApitrazModel.SalasExtraccion" Width="2.25" PointX="17.75" PointY="27.5" Height="3.5186979166666674" IsExpanded="true" />
         <EntityTypeShape EntityType="ApitrazModel.SalasProcFracc" Width="1.5" PointX="7.5" PointY="31.75" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="ApitrazModel.Tipos_de_analisis" Width="1.5" PointX="0.75" PointY="5.75" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="ApitrazModel.Tipos_de_Grupos" Width="1.5" PointX="8.25" PointY="19.5" Height="1.595683593749996" IsExpanded="true" />
@@ -2668,8 +2668,6 @@
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.Apiarios_FK00" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="24.220896809895834" />
-          <ConnectorPoint PointX="7.166666666666667" PointY="24.220896809895834" />
-          <ConnectorPoint PointX="7.333333333333333" PointY="24.220896809895834" />
           <ConnectorPoint PointX="7.5" PointY="24.220896809895834" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.Apiarios_FK01" ManuallyRouted="false">
@@ -2688,8 +2686,8 @@
           <ConnectorPoint PointX="8.25" PointY="26.446848958333334" />
           <ConnectorPoint PointX="8.5729191666666669" PointY="26.446848958333334" />
           <ConnectorPoint PointX="8.7395858333333347" PointY="26.446848958333334" />
-          <ConnectorPoint PointX="12.166666666666666" PointY="26.446848958333334" />
-          <ConnectorPoint PointX="12.333333333333334" PointY="26.446848958333334" />
+          <ConnectorPoint PointX="11.197918666666666" PointY="26.446848958333334" />
+          <ConnectorPoint PointX="11.364585333333334" PointY="26.446848958333334" />
           <ConnectorPoint PointX="12.416666666666666" PointY="26.446848958333334" />
           <ConnectorPoint PointX="12.583333333333334" PointY="26.446848958333334" />
           <ConnectorPoint PointX="12.75" PointY="26.446848958333334" />
@@ -2753,14 +2751,14 @@
           <ConnectorPoint PointX="15.75" PointY="22.625" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.Grupos_FK00" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="25.691793619791667" />
+          <ConnectorPoint PointX="6.75" PointY="23.769914763621795" />
           <ConnectorPoint PointX="7.125" PointY="26.066793619791667" />
-          <ConnectorPoint PointX="7.125" PointY="26.268697916666667" />
-          <ConnectorPoint PointX="8.1666666666666661" PointY="26.268697916666667" />
-          <ConnectorPoint PointX="8.3333333333333339" PointY="26.268697916666667" />
-          <ConnectorPoint PointX="8.5729191666666669" PointY="26.268697916666667" />
-          <ConnectorPoint PointX="8.7395858333333347" PointY="26.268697916666667" />
-          <ConnectorPoint PointX="10.25" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="7.125" PointY="26.237447916666667" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="26.237447916666667" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="26.237447916666667" />
+          <ConnectorPoint PointX="8.5729191666666669" PointY="26.237447916666667" />
+          <ConnectorPoint PointX="8.7395858333333347" PointY="26.237447916666667" />
+          <ConnectorPoint PointX="10.25" PointY="26.237447916666667" />
           <ConnectorPoint PointX="10.5" PointY="26.018697916666667" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.Grupos_FK01" ManuallyRouted="false">
@@ -2780,21 +2778,19 @@
           <ConnectorPoint PointX="15.75" PointY="20.055043945312498" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalasExtracción_FK00" ManuallyRouted="false">
-          <ConnectorPoint PointX="12" PointY="24.259348958333334" />
-          <ConnectorPoint PointX="12.5" PointY="24.259348958333334" />
-          <ConnectorPoint PointX="12.5" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="13.822916666666666" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="13.989583333333334" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="14.416666666666666" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="14.583333333333334" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="14.75" PointY="27.653219401041667" />
-          <ConnectorPoint PointX="14.75" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="15.166666666666666" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="15.333333333333334" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="17.416666666666668" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="17.583333333333332" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="18.5" PointY="26.124410807291667" />
-          <ConnectorPoint PointX="18.5" PointY="27.5" />
+          <ConnectorPoint PointX="11.281252" PointY="26.018697916666667" />
+          <ConnectorPoint PointX="11.281252" PointY="26.625" />
+          <ConnectorPoint PointX="11.75" PointY="26.625" />
+          <ConnectorPoint PointX="11.75" PointY="27.75" />
+          <ConnectorPoint PointX="13.822916666666666" PointY="27.75" />
+          <ConnectorPoint PointX="13.989583333333334" PointY="27.75" />
+          <ConnectorPoint PointX="14.75" PointY="27.75" />
+          <ConnectorPoint PointX="14.75" PointY="29.605286458333339" />
+          <ConnectorPoint PointX="17.375" PointY="29.605286458333339" />
+          <ConnectorPoint PointX="17.375" PointY="28.713819614583343" />
+          <ConnectorPoint PointX="17.416666666666668" PointY="28.713819614583343" />
+          <ConnectorPoint PointX="17.583333333333332" PointY="28.713819614583343" />
+          <ConnectorPoint PointX="17.75" PointY="28.713819614583343" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.Productores_FK01" ManuallyRouted="false">
           <ConnectorPoint PointX="6" PointY="22.75" />
@@ -2810,29 +2806,27 @@
           <ConnectorPoint PointX="15.75" PointY="16.671877499999994" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalasExtracción_FK01" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="23.454196404947915" />
-          <ConnectorPoint PointX="7.25" PointY="23.454196404947915" />
-          <ConnectorPoint PointX="7.25" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="8.1666666666666661" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="8.3333333333333339" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="8.5729191666666669" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="8.7395858333333347" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="10.291666666666666" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="10.458333333333334" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="12.25" PointY="26.143697916666667" />
-          <ConnectorPoint PointX="12.25" PointY="27.903219401041667" />
-          <ConnectorPoint PointX="13.822916666666666" PointY="27.903219401041667" />
-          <ConnectorPoint PointX="13.989583333333334" PointY="27.903219401041667" />
-          <ConnectorPoint PointX="14.5" PointY="27.903219401041667" />
-          <ConnectorPoint PointX="14.5" PointY="27.125" />
-          <ConnectorPoint PointX="14.666666666666666" PointY="27.125" />
-          <ConnectorPoint PointX="14.833333333333334" PointY="27.125" />
-          <ConnectorPoint PointX="15.166666666666666" PointY="27.125" />
-          <ConnectorPoint PointX="15.333333333333334" PointY="27.125" />
-          <ConnectorPoint PointX="17.416666666666668" PointY="27.125" />
-          <ConnectorPoint PointX="17.583333333333332" PointY="27.125" />
-          <ConnectorPoint PointX="18.093747999999998" PointY="27.125" />
-          <ConnectorPoint PointX="18.093747999999998" PointY="27.5" />
+          <ConnectorPoint PointX="6.75" PointY="24.220896809895834" />
+          <ConnectorPoint PointX="7.25" PointY="24.220896809895834" />
+          <ConnectorPoint PointX="7.25" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="8.5729191666666669" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="8.7395858333333347" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="11.197918666666666" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="11.364585333333334" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="12.5" PointY="26.268697916666667" />
+          <ConnectorPoint PointX="12.5" PointY="27.653219401041667" />
+          <ConnectorPoint PointX="13.822916666666666" PointY="27.653219401041667" />
+          <ConnectorPoint PointX="13.989583333333334" PointY="27.653219401041667" />
+          <ConnectorPoint PointX="14.5" PointY="27.653219401041667" />
+          <ConnectorPoint PointX="14.5" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="15.166666666666666" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="15.333333333333334" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="17.416666666666668" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="17.583333333333332" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="18.875" PointY="26.124410807291667" />
+          <ConnectorPoint PointX="18.875" PointY="27.5" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalasProcFracc_FK00" ManuallyRouted="false">
           <ConnectorPoint PointX="5.9687475" PointY="25.691793619791667" />
@@ -2848,8 +2842,9 @@
           <ConnectorPoint PointX="21" PointY="17.03125" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.MovSalasExtraccion_FK00" ManuallyRouted="false">
-          <ConnectorPoint PointX="19.25" PointY="29.2112939453125" />
-          <ConnectorPoint PointX="20" PointY="29.2112939453125" />
+          <ConnectorPoint PointX="20" PointY="30.854045410156253" />
+          <ConnectorPoint PointX="20.78125" PointY="30.854045410156253" />
+          <ConnectorPoint PointX="20.78125" PointY="30.297587890625003" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.PlanillaCampo_FK01" ManuallyRouted="false">
           <ConnectorPoint PointX="15.75" PointY="15.765622500000006" />
@@ -2862,14 +2857,12 @@
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.PlanillasMovimientos_FK00" ManuallyRouted="false">
           <ConnectorPoint PointX="14.25" PointY="21.913157552083334" />
-          <ConnectorPoint PointX="15.041666666666666" PointY="21.913157552083334" />
-          <ConnectorPoint PointX="15.458333333333334" PointY="21.913157552083334" />
+          <ConnectorPoint PointX="15.083333333333332" PointY="21.913157552083334" />
+          <ConnectorPoint PointX="15.458333333333332" PointY="21.913157552083334" />
           <ConnectorPoint PointX="15.479166666666666" PointY="21.913157552083334" />
           <ConnectorPoint PointX="15.645833333333334" PointY="21.913157552083334" />
           <ConnectorPoint PointX="16.416666666666668" PointY="21.913157552083334" />
           <ConnectorPoint PointX="16.583333333333332" PointY="21.913157552083334" />
-          <ConnectorPoint PointX="16.82291866666667" PointY="21.913157552083334" />
-          <ConnectorPoint PointX="16.989585333333334" PointY="21.913157552083334" />
           <ConnectorPoint PointX="17.541666666666668" PointY="21.913157552083334" />
           <ConnectorPoint PointX="17.708333333333332" PointY="21.913157552083334" />
           <ConnectorPoint PointX="18" PointY="21.913157552083334" />
@@ -2900,6 +2893,8 @@
           <ConnectorPoint PointX="11.25" PointY="28.107859700520834" />
           <ConnectorPoint PointX="13.822916666666666" PointY="28.107859700520834" />
           <ConnectorPoint PointX="13.989583333333334" PointY="28.107859700520834" />
+          <ConnectorPoint PointX="14.666666666666666" PointY="28.107859700520834" />
+          <ConnectorPoint PointX="14.833333333333334" PointY="28.107859700520834" />
           <ConnectorPoint PointX="15" PointY="28.107859700520834" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalaProcFraccMovimientoDe_FK00" ManuallyRouted="false">
@@ -2914,8 +2909,8 @@
           <ConnectorPoint PointX="21" PointY="33.576650390625005" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalaProcFraccMovimientoDe_FK01" ManuallyRouted="false">
-          <ConnectorPoint PointX="19.25" PointY="30.689392903645835" />
-          <ConnectorPoint PointX="22.03125" PointY="30.689392903645835" />
+          <ConnectorPoint PointX="20" PointY="27.78125" />
+          <ConnectorPoint PointX="22.03125" PointY="27.78125" />
           <ConnectorPoint PointX="22.03125" PointY="31.625" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalaProcYFraccMovimiento_FK00" ManuallyRouted="false">
@@ -2924,18 +2919,18 @@
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.SalasExtracción_FK02" ManuallyRouted="false">
           <ConnectorPoint PointX="16.78125" PointY="35.5" />
-          <ConnectorPoint PointX="16.78125" PointY="29.990143229166669" />
-          <ConnectorPoint PointX="17.416666666666668" PointY="29.990143229166669" />
-          <ConnectorPoint PointX="17.583333333333332" PointY="29.990143229166669" />
-          <ConnectorPoint PointX="17.75" PointY="29.990143229166669" />
+          <ConnectorPoint PointX="16.78125" PointY="30.083893229166669" />
+          <ConnectorPoint PointX="17.416666666666668" PointY="30.083893229166669" />
+          <ConnectorPoint PointX="17.583333333333332" PointY="30.083893229166669" />
+          <ConnectorPoint PointX="17.75" PointY="30.083893229166669" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.ProductosOfrecidosProv" ManuallyRouted="false">
           <ConnectorPoint PointX="17.25" PointY="13.31042243068911" />
           <ConnectorPoint PointX="18" PointY="13.31042243068911" />
         </AssociationConnector>
         <AssociationConnector Association="ApitrazModel.RemediosPorProductor" ManuallyRouted="false">
-          <ConnectorPoint PointX="16.906252000000002" PointY="21.201315104166667" />
-          <ConnectorPoint PointX="16.906252000000002" PointY="22.375" />
+          <ConnectorPoint PointX="16.5" PointY="21.201315104166667" />
+          <ConnectorPoint PointX="16.5" PointY="22.375" />
           <ConnectorPoint PointX="17.5" PointY="22.375" />
           <ConnectorPoint PointX="17.5" PointY="33.172841796875" />
           <ConnectorPoint PointX="18" PointY="33.172841796875" />

@@ -275,39 +275,39 @@ namespace ApiTraz.Models
         private TrackableCollection<Productores> _productores;
     
         [DataMember]
-        public TrackableCollection<SalasExtraccion> SalasExtracción
+        public TrackableCollection<SalasExtraccion> SalasExtraccion
         {
             get
             {
-                if (_salasExtracción == null)
+                if (_salasExtraccion == null)
                 {
-                    _salasExtracción = new TrackableCollection<SalasExtraccion>();
-                    _salasExtracción.CollectionChanged += FixupSalasExtracción;
+                    _salasExtraccion = new TrackableCollection<SalasExtraccion>();
+                    _salasExtraccion.CollectionChanged += FixupSalasExtraccion;
                 }
-                return _salasExtracción;
+                return _salasExtraccion;
             }
             set
             {
-                if (!ReferenceEquals(_salasExtracción, value))
+                if (!ReferenceEquals(_salasExtraccion, value))
                 {
                     if (ChangeTracker.ChangeTrackingEnabled)
                     {
                         throw new InvalidOperationException("No se puede establecer el elemento FixupChangeTrackingCollection cuando se ha habilitado ChangeTracking");
                     }
-                    if (_salasExtracción != null)
+                    if (_salasExtraccion != null)
                     {
-                        _salasExtracción.CollectionChanged -= FixupSalasExtracción;
+                        _salasExtraccion.CollectionChanged -= FixupSalasExtraccion;
                     }
-                    _salasExtracción = value;
-                    if (_salasExtracción != null)
+                    _salasExtraccion = value;
+                    if (_salasExtraccion != null)
                     {
-                        _salasExtracción.CollectionChanged += FixupSalasExtracción;
+                        _salasExtraccion.CollectionChanged += FixupSalasExtraccion;
                     }
-                    OnNavigationPropertyChanged("SalasExtracción");
+                    OnNavigationPropertyChanged("SalasExtraccion");
                 }
             }
         }
-        private TrackableCollection<SalasExtraccion> _salasExtracción;
+        private TrackableCollection<SalasExtraccion> _salasExtraccion;
 
         #endregion
         #region ChangeTracking
@@ -391,7 +391,7 @@ namespace ApiTraz.Models
             Loc = null;
             Tipos_de_Grupos = null;
             Productores.Clear();
-            SalasExtracción.Clear();
+            SalasExtraccion.Clear();
         }
 
         #endregion
@@ -563,7 +563,7 @@ namespace ApiTraz.Models
             }
         }
     
-        private void FixupSalasExtracción(object sender, NotifyCollectionChangedEventArgs e)
+        private void FixupSalasExtraccion(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (IsDeserializing)
             {
@@ -581,7 +581,7 @@ namespace ApiTraz.Models
                         {
                             item.StartTracking();
                         }
-                        ChangeTracker.RecordAdditionToCollectionProperties("SalasExtracción", item);
+                        ChangeTracker.RecordAdditionToCollectionProperties("SalasExtraccion", item);
                     }
                 }
             }
@@ -596,7 +596,7 @@ namespace ApiTraz.Models
                     }
                     if (ChangeTracker.ChangeTrackingEnabled)
                     {
-                        ChangeTracker.RecordRemovalFromCollectionProperties("SalasExtracción", item);
+                        ChangeTracker.RecordRemovalFromCollectionProperties("SalasExtraccion", item);
                     }
                 }
             }

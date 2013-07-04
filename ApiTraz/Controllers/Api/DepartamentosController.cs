@@ -19,7 +19,7 @@ namespace ApiTraz.Controllers.Api
 
         // GET api/Departamentos
         [Queryable(AllowedQueryOptions = AllowedQueryOptions.All)]
-        public IQueryable<Dptos> GetDptos(ODataQueryOptions queryOptions)
+        public IQueryable<Dptos> GetDptosList(ODataQueryOptions queryOptions)
         {           
             // Apply the query
             return queryOptions.ApplyTo(db.Dptos.Include("Loc").AsQueryable()) as IQueryable<Dptos>;

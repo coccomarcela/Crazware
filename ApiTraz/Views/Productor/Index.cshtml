@@ -1,142 +1,105 @@
 ﻿@{
     ViewBag.Title = "Listado Productores";
 }
-
-
-
 <div class="span12" id="contentparameter">
-  
-
-<span data-bind="StringtoHtml:SearchingBy"></span> 
-<span data-bind="StringtoHtml:searchingResult"></span>
-  
-<span  id="errortext" style="font-size:18px ; background:Red ; color:white"></span>
-<table   class="table table-striped" id="tableproductores">
-   
-   
-   <caption >
-   <b>Productores</b>
-    
-   </caption>
-   
-   
-   <thead>
-
-    
-
-    
-    
-     <tr id="SeccionSearch">
-
-          <th id="col_ren">
-              <div class="input-prepend input-append">
-                  <span class="add-on">
-                      <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
-                  </span>
-                  <input class="input-medium" data-bind="value:searchByRenapa, update:onsubmit" placeholder="Buscar Por Renapa..."    />
-              </div>
-          </th>
-
-
-
-
-         <th id="col_Nombre_col_Apellido">
-             <div class="input-prepend input-append">
-                 <span class="add-on">
-                     <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
-                 </span>
-                 <input class="input-xlarge" data-bind="value:searchByNomApe,update:onsubmit" placeholder="Buscar Apellido,Nombre..." />
-                 <label>Ingrese <b> *, + Nombre </b> para buscar solo por nombre</label>
-                  
-             </div>
-         </th>
-
-
-         <td id="col_dni">
-             <div class="input-prepend input-append">
-                 <span class="add-on">
-                     <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
-                 </span>
-                 <input class="input-xlarge" placeholder="Buscar DNI..." data-bind="value:searchByDNI,update:onsubmit" />
-             </div>
-         </td>
-
-
-
-
-
-         <th id="col_Dto_col_Loc">
-             <select id="cbo_dto" data-bind="
+    <span data-bind="StringtoHtml:SearchingBy"></span><span data-bind="StringtoHtml:searchingResult">
+    </span><span id="errortext" style="font-size: 18px; background: Red; color: white">
+    </span>
+    <table class="table table-striped" id="tableproductores">
+        <caption>
+            <b>Productores</b>
+        </caption>
+        <thead>
+            <tr id="TitulosCol">
+                <th>
+                    Renapa
+                </th>
+                <th>
+                    Apellido y Nombre
+                </th>
+                <th>
+                    DNI
+                </th>
+                <th>
+                    Departamento Localidad
+                </th>
+                <th>
+                Fecha de Inscripción
+                </th>
+            </tr>
+            <tr id="SeccionSearch">
+                <th id="col_ren">
+                    <div class="input-prepend input-append">
+                        <span class="add-on">
+                            <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
+                        </span>
+                        <input class="input-medium" data-bind="value:searchByRenapa, update:onsubmit" placeholder="Buscar Por Renapa..." />
+                    </div>
+                </th>
+                <th id="col_Nombre_col_Apellido">
+                    <div class="input-prepend input-append">
+                        <span class="add-on">
+                            <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
+                        </span>
+                        <input class="input-xlarge" data-bind="value:searchByNomApe,update:onsubmit" placeholder="Buscar Apellido,Nombre..." />
+                        <label>
+                            Ingrese <b>*, + Nombre </b>para buscar solo por nombre</label>
+                    </div>
+                </th>
+                <td id="col_dni">
+                    <div class="input-prepend input-append">
+                        <span class="add-on">
+                            <img src="~/Images/orderedList1.png" class="img-rounded" alt="Logo Corrientes Miel">
+                        </span>
+                        <input class="input-xlarge"  placeholder="Buscar DNI..." data-bind="value:searchByDNI,update:onsubmit" />
+                    </div>
+                </td>
+                <th id="col_Dto_col_Loc">
+                    <select id="cbo_dto" data-bind="
         value: selectedDto,
         options:        Departamentos,
         optionsText:    'Dpto',
         optionsValue:   'CodDpto',
         visibleFade: HasDto,
-        update:onselect,
+        update:onsubmit,
         optionsCaption: '-- Seleccione Departamento --'
         ">
-             </select>
-
-
-             <select data-bind="
+                    </select>
+                    <select data-bind="
         value: searchByLoc,
         options:  Localidades,
          optionsText:   'Loc1',
         optionsValue:   'CodLoc',
         visibleFade:HasLoc,
-        update:onselect,
+        update:onsubmit,
         optionsCaption: '-- Seleccione Localidad --'">
-             </select>
-         </th>
-     </tr>
-
-       <tr id="TitulosCol">
-           <th>
-               Renapa
-           </th>
-           <th>
-               Apellido y Nombre
-           </th>
-           <th>
-               DNI
-           </th>
-           <th>
-               Departamento Localidad
-           </th>
-       </tr>
-
-
-   </thead>
-
-    <tbody data-bind="foreach:{data:Productores}">
-        <tr>
-            <td>
-                <span data-bind="text: ren"></span>
-            </td>
-            <td>
-                <span data-bind="text:  ape"></span>, <span data-bind="text:nom"></span>
-            </td>
-            <td>
-                <span data-bind="text: dni"></span>
-            </td>
-            <td>
-                <span data-bind="text:Model.getLocDto($data)"></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
- 
-   
+                    </select>
+                </th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:Productores}">
+            <tr>
+                <td>
+                    <span data-bind="text: ren"></span>
+                </td>
+                <td>
+                    <span data-bind="text:  ape"></span>, <span data-bind="text:nom"></span>
+                </td>
+                <td>
+                    <span data-bind="text: dni"></span>
+                </td>
+                <td>
+                    <span data-bind="text:Model.getLocDto($data)"></span>
+                </td>
+                <td>
+               
+                    <span data-bind="dateString:fechains,dateFormat:'LL'" ></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
 </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -145,20 +108,22 @@
  @*   @Scripts.Render("~/bundles/knockout")*@
     <script src="~/Scripts/knockout-2.2.1.js"></script>
     <script src="~/Scripts/knockout.mapping-latest.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    
     <script type="text/javascript" >
 
         //===================================================
         //1)Propiedades de acceso Publico
         //===================================================
         var baseUrl = "@Request.Url.GetLeftPart(UriPartial.Authority)";
-        var serviceGeo = baseUrl + "/api/Departamentos"; ;
-        var serviceProductores = "/api/productores";
+        var serviceGeo = baseUrl + "/api/Departamentos/GetDptosList"; ;
+        var serviceProductores = "/api/productores/GetProductoresList";
         var pathUri;
         
         //===================================================
         //2)Modelo de Datos
         //===================================================
-
+       
         var Model = {
 
             //Modelos de Datos
@@ -234,13 +199,25 @@
             filter = this.searchByDNI();
 
             if (filter) {
-                query = "?$filter=dni eq " + filter;
-                mensaje = "Busqueda por DNI: <b>" + filter + "</b>";
+
+                if (!isNaN(filter)) {
+                    query = "?$filter=dni eq " + filter;
+                    mensaje = "Busqueda por DNI: <b>" + filter + "</b>";
+                }
+
+
+
+
+
+
+
             }
 
             //Buscado Por Codigo Renapa
             filter = this.searchByRenapa();
             if (filter) {
+
+
                 query = "?$filter=startswith(ren,'" + filter + "')";
                 mensaje = "Busqueda por Codigo Renapa: <b>" + filter + "</b>";
 
@@ -252,7 +229,7 @@
 
                 var filters = filter.split(",");
                 if (filters.length === 1) {
-                    query = "?$filter=startswith(ape,'" + filters[0] + "') &$orderby=ape,nom";
+                    query = "?$filter=startswith(ape,'" + filters[0].trim() + "') &$orderby=ape,nom";
                     mensaje = "Busqueda por Apellido: <b>" + filters[0] + "</b>";
                 }
                 else {
@@ -275,8 +252,13 @@
             filter = this.searchByLoc();
 
             if (filter) {
-                query = "?$filter=CodLoc eq " + filter + "&$orderby=ape,nom ";
-                mensaje = "Busqueda por  <b> Localidad </b>";
+
+                if (!isNaN(filter)) {
+                    query = "?$filter=CodLoc eq " + filter + "&$orderby=ape,nom ";
+                    mensaje = "Busqueda por  <b> Localidad </b>";
+                }
+
+
             }
 
 
@@ -284,15 +266,19 @@
             if (query) {
                 Model.SearchingBy(mensaje);
                 BuscarProductores(query);
+                //Blanquear todos los campos
 
+                //TODO: Verificar validacion de filtro por codigo de localidad
+                this.searchByDNI('');
+                this.searchByRenapa('');
+                this.searchByNomApe('');
+
+                this.Localidades([]);
+                this.searchByLoc('');
+                this.selectedDto(0);
             }
 
-            //Blanquear todos los campos
-            this.searchByDNI('');
-            this.searchByRenapa('');
-            this.searchByNomApe('');
-            this.searchByLoc(-1);
-            this.selectedDto(-1);
+        
 
         }, Model);
 
@@ -376,6 +362,57 @@
                 $(element).html(ko.utils.unwrapObservable(valueAccessor()));
             }
         };
+
+//        ko.bindingHandlers.dateString = {
+//            update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+//                var value = valueAccessor();
+//                allBindings = allBindingsAccessor();
+//                var valueUnwrapped = ko.utils.unwrapObservable(value);
+//                var pattern = allBindings.datePattern || 'MM/DD/YYYY';
+//                $(element).text(moment(valueUnwrapped).format(pattern));
+//            }
+////        }
+//        ko.bindingHandlers.dateString = {
+//            update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+//                var value = valueAccessor(),
+//            allBindings = allBindingsAccessor();
+//                var valueUnwrapped = ko.utils.unwrapObservable(value);
+//                var pattern = allBindings.datePattern || 'MM/dd/yyyy';
+//                $(element).text(valueUnwrapped.toString(pattern));
+//            }
+//        }
+        // can be something like yy-mm-dd
+        ko.bindingHandlers.dateString = {
+            init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+                var value = valueAccessor();
+                if (value != null) {
+//                    var valueUnwrapped = ko.utils.unwrapObservable(value);
+//                    var jsonDate = new Date(parseInt(valueUnwrapped.substr(6)));
+////                    var jsonDate = new Date(parseInt(valueAccessor().substr(6)));
+//                    element.innerHTML = jQuery.datepicker.formatDate(jsDateFormat, jsonDate);
+//                    var f = jQuery.datepicker.formatDate(jsDateFormat, jsonDate);
+//                    $(element).text(f);
+
+
+                    allBindings = allBindingsAccessor();
+                    var jsDateFormat = allBindings.dateFormat || 'DD/MM/YYYY';
+                    //var valueUnwrapped = ko.utils.unwrapObservable(value);
+                    var date = moment(value);
+                    $(element).text(date.format(jsDateFormat));
+
+                }
+            },
+            update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+                //                var value = valueAccessor();
+                //                if (value != null) {
+                //                    var jsonDate = new Date(parseInt(valueAccessor().substr(6)));
+                //                    element.innerHTML = jQuery.datepicker.formatDate(jsDateFormat, jsonDate);
+                //                }
+
+            }
+        }
+
+
 
         //===================================================
         //6)Aplicando Modelo a la View

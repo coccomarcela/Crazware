@@ -37,9 +37,9 @@ namespace ApiTraz.Models
                     }
                     if (!IsDeserializing)
                     {
-                        if (SalasExtracción != null && SalasExtracción.NroSalaExtraccion != value)
+                        if (SalasExtraccion != null && SalasExtraccion.NroSalaExtraccion != value)
                         {
-                            SalasExtracción = null;
+                            SalasExtraccion = null;
                         }
                     }
                     _nroSalaExtraccion = value;
@@ -101,9 +101,9 @@ namespace ApiTraz.Models
                     }
                     if (!IsDeserializing)
                     {
-                        if (SalasExtracción != null && SalasExtracción.IdTipoSala != value)
+                        if (SalasExtraccion != null && SalasExtraccion.IdTipoSala != value)
                         {
-                            SalasExtracción = null;
+                            SalasExtraccion = null;
                         }
                     }
                     _idTipoSala = value;
@@ -132,12 +132,12 @@ namespace ApiTraz.Models
         #region Propiedades de navegación
     
         [DataMember]
-        public SalasExtraccion SalasExtracción
+        public SalasExtraccion SalasExtraccion
         {
-            get { return _salasExtracción; }
+            get { return _salasExtraccion; }
             set
             {
-                if (!ReferenceEquals(_salasExtracción, value))
+                if (!ReferenceEquals(_salasExtraccion, value))
                 {
                     if (ChangeTracker.ChangeTrackingEnabled && ChangeTracker.State != ObjectState.Added && value != null)
                     {
@@ -148,14 +148,14 @@ namespace ApiTraz.Models
                             throw new InvalidOperationException("El extremo principal de una relación de identificación solo se puede modificar cuando el extremo dependiente se encuentra en el estado de agregado.");
                         }
                     }
-                    var previousValue = _salasExtracción;
-                    _salasExtracción = value;
-                    FixupSalasExtracción(previousValue);
-                    OnNavigationPropertyChanged("SalasExtracción");
+                    var previousValue = _salasExtraccion;
+                    _salasExtraccion = value;
+                    FixupSalasExtraccion(previousValue);
+                    OnNavigationPropertyChanged("SalasExtraccion");
                 }
             }
         }
-        private SalasExtraccion _salasExtracción;
+        private SalasExtraccion _salasExtraccion;
 
         #endregion
         #region ChangeTracking
@@ -245,13 +245,13 @@ namespace ApiTraz.Models
     
         protected virtual void ClearNavigationProperties()
         {
-            SalasExtracción = null;
+            SalasExtraccion = null;
         }
 
         #endregion
         #region Corrección de asociación
     
-        private void FixupSalasExtracción(SalasExtraccion previousValue)
+        private void FixupSalasExtraccion(SalasExtraccion previousValue)
         {
             if (IsDeserializing)
             {
@@ -263,30 +263,30 @@ namespace ApiTraz.Models
                 previousValue.MovSalasExtraccion.Remove(this);
             }
     
-            if (SalasExtracción != null)
+            if (SalasExtraccion != null)
             {
-                if (!SalasExtracción.MovSalasExtraccion.Contains(this))
+                if (!SalasExtraccion.MovSalasExtraccion.Contains(this))
                 {
-                    SalasExtracción.MovSalasExtraccion.Add(this);
+                    SalasExtraccion.MovSalasExtraccion.Add(this);
                 }
     
-                NroSalaExtraccion = SalasExtracción.NroSalaExtraccion;
-                IdTipoSala = SalasExtracción.IdTipoSala;
+                NroSalaExtraccion = SalasExtraccion.NroSalaExtraccion;
+                IdTipoSala = SalasExtraccion.IdTipoSala;
             }
             if (ChangeTracker.ChangeTrackingEnabled)
             {
-                if (ChangeTracker.OriginalValues.ContainsKey("SalasExtracción")
-                    && (ChangeTracker.OriginalValues["SalasExtracción"] == SalasExtracción))
+                if (ChangeTracker.OriginalValues.ContainsKey("SalasExtraccion")
+                    && (ChangeTracker.OriginalValues["SalasExtraccion"] == SalasExtraccion))
                 {
-                    ChangeTracker.OriginalValues.Remove("SalasExtracción");
+                    ChangeTracker.OriginalValues.Remove("SalasExtraccion");
                 }
                 else
                 {
-                    ChangeTracker.RecordOriginalValue("SalasExtracción", previousValue);
+                    ChangeTracker.RecordOriginalValue("SalasExtraccion", previousValue);
                 }
-                if (SalasExtracción != null && !SalasExtracción.ChangeTracker.ChangeTrackingEnabled)
+                if (SalasExtraccion != null && !SalasExtraccion.ChangeTracker.ChangeTrackingEnabled)
                 {
-                    SalasExtracción.StartTracking();
+                    SalasExtraccion.StartTracking();
                 }
             }
         }

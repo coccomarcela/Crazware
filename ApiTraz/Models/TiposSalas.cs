@@ -61,51 +61,51 @@ namespace ApiTraz.Models
         #region Propiedades de navegación
     
         [DataMember]
-        public TrackableCollection<SalasExtraccion> SalasExtracción
+        public TrackableCollection<SalasExtraccion> SalasExtraccion
         {
             get
             {
-                if (_salasExtracción == null)
+                if (_salasExtraccion == null)
                 {
-                    _salasExtracción = new TrackableCollection<SalasExtraccion>();
-                    _salasExtracción.CollectionChanged += FixupSalasExtracción;
+                    _salasExtraccion = new TrackableCollection<SalasExtraccion>();
+                    _salasExtraccion.CollectionChanged += FixupSalasExtraccion;
                 }
-                return _salasExtracción;
+                return _salasExtraccion;
             }
             set
             {
-                if (!ReferenceEquals(_salasExtracción, value))
+                if (!ReferenceEquals(_salasExtraccion, value))
                 {
                     if (ChangeTracker.ChangeTrackingEnabled)
                     {
                         throw new InvalidOperationException("No se puede establecer el elemento FixupChangeTrackingCollection cuando se ha habilitado ChangeTracking");
                     }
-                    if (_salasExtracción != null)
+                    if (_salasExtraccion != null)
                     {
-                        _salasExtracción.CollectionChanged -= FixupSalasExtracción;
+                        _salasExtraccion.CollectionChanged -= FixupSalasExtraccion;
                         // Este es el extremo principal en una asociación que realiza eliminaciones en cascada.
                         // Quitar el controlador de eventos de eliminación en cascada para aquellas entidades de la colección actual.
-                        foreach (SalasExtraccion item in _salasExtracción)
+                        foreach (SalasExtraccion item in _salasExtraccion)
                         {
                             ChangeTracker.ObjectStateChanging -= item.HandleCascadeDelete;
                         }
                     }
-                    _salasExtracción = value;
-                    if (_salasExtracción != null)
+                    _salasExtraccion = value;
+                    if (_salasExtraccion != null)
                     {
-                        _salasExtracción.CollectionChanged += FixupSalasExtracción;
+                        _salasExtraccion.CollectionChanged += FixupSalasExtraccion;
                         // Este es el extremo principal en una asociación que realiza eliminaciones en cascada.
                         // Agrega el controlador de eventos de eliminación en cascada para aquellas entidades que ya se encuentran en la nueva colección.
-                        foreach (SalasExtraccion item in _salasExtracción)
+                        foreach (SalasExtraccion item in _salasExtraccion)
                         {
                             ChangeTracker.ObjectStateChanging += item.HandleCascadeDelete;
                         }
                     }
-                    OnNavigationPropertyChanged("SalasExtracción");
+                    OnNavigationPropertyChanged("SalasExtraccion");
                 }
             }
         }
-        private TrackableCollection<SalasExtraccion> _salasExtracción;
+        private TrackableCollection<SalasExtraccion> _salasExtraccion;
 
         #endregion
         #region ChangeTracking
@@ -185,13 +185,13 @@ namespace ApiTraz.Models
     
         protected virtual void ClearNavigationProperties()
         {
-            SalasExtracción.Clear();
+            SalasExtraccion.Clear();
         }
 
         #endregion
         #region Corrección de asociación
     
-        private void FixupSalasExtracción(object sender, NotifyCollectionChangedEventArgs e)
+        private void FixupSalasExtraccion(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (IsDeserializing)
             {
@@ -209,7 +209,7 @@ namespace ApiTraz.Models
                         {
                             item.StartTracking();
                         }
-                        ChangeTracker.RecordAdditionToCollectionProperties("SalasExtracción", item);
+                        ChangeTracker.RecordAdditionToCollectionProperties("SalasExtraccion", item);
                     }
                     // Este es el extremo principal en una asociación que realiza eliminaciones en cascada.
                     // Actualizar la escucha de eventos para que se refiera al nuevo extremo dependiente.
@@ -227,7 +227,7 @@ namespace ApiTraz.Models
                     }
                     if (ChangeTracker.ChangeTrackingEnabled)
                     {
-                        ChangeTracker.RecordRemovalFromCollectionProperties("SalasExtracción", item);
+                        ChangeTracker.RecordRemovalFromCollectionProperties("SalasExtraccion", item);
                         // Eliminar el extremo dependiente de esta asociación de identificación. Si el estado actual es agregado,
                         // permite que la relación se modifique sin eliminar el elemento dependiente.
                         if (item.ChangeTracker.State != ObjectState.Added)
